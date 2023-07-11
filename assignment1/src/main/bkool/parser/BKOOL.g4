@@ -30,9 +30,10 @@ Prog_word: PROGRAM;
 Extends_word: EXTENDS;
 member_lists: attributes | methods | instructor;
 instructor: class_name LP (paramlist)? RP block_stmt;
-attributes: (STATIC)? (FINAL)? primitive_Type idlist (Assign_op operands)? SEMI;
-methods: (STATIC)? (FINAL)? (primitive_Type|Void_word) (ID|Main_word) LP (paramlist)? RP block_stmt;
-
+attributes: (Static_word)? (Final_word)? primitive_Type idlist (Assign_op operands)? SEMI;
+methods: (Static_word)? (Final_word)? (primitive_Type|Void_word) (ID|Main_word) LP (paramlist)? RP block_stmt;
+Static_word: STATIC;
+Final_word: FINAL;
 Void_word: VOID;
 // class declaration _ end
 
@@ -272,15 +273,6 @@ fragment OCTAL: '0'[0-7][0-7_]*;
 fragment HEX: '0'[xX][A-F0-9][A-F0-9_]*;
 fragment BIN: '0'[bB][01][01_]*;
 
-//This is not lexer rules!!!
-// For arrays in array
-multi_ArrayLIT: Array_word LP array_list? RP;
-array_list: arrayLIT (COMA arrayLIT)*;
-// For indexed array
-arrayLIT: Array_word LP element_list? RP;
-element_list: elements (COMA elements)*;
-elements: expr;
-//This is not lexer rules!!!
 
 PROGRAM: 'Program';
 MAIN: 'main';
@@ -327,6 +319,16 @@ DOWNTO: 'downto';
 //| INT | FLOAT | BOOL | STRING | RETURN |
 //| NULL | CLASS | VAL | VAR |
 //| CONS | DEST | KEYWORD_NEW | BY ;
+
+//This is not lexer rules!!!
+// For arrays in array
+multi_ArrayLIT: Array_word LP array_list? RP;
+array_list: arrayLIT (COMA arrayLIT)*;
+// For indexed array
+arrayLIT: Array_word LP element_list? RP;
+element_list: elements (COMA elements)*;
+elements: expr;
+//This is not lexer rules!!!
 
 //These tokens for operators
 ADD_OP: '+';
