@@ -1,0 +1,11 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static float getArea() {
+                    int a := 1;
+                    if a > 2 then {
+                        a := 111;
+                    }
+                }
+            }
+        
