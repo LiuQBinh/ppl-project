@@ -39,13 +39,13 @@ Void_word: VOID;
 
 //-------------------------------------------------------
 //This is praser rules for block stmts
-block_stmt: (block_stmt_list SEMI) | (LB block_stmt_list* RB);
+block_stmt: (block_stmt_list) | (LB block_stmt_list* RB);
 block_stmt_list: (stmt | var_cons_decl | var_cons_list); //including stmts and variables/constants declaration
 
 //Rules for variables/constants
 var_cons_decl: (Var_word | Val_word) idlist Colon types (Assign_op expr_list)? SEMI
             | paramlist ( (Colon Assign_op) (expr|new_val_from_class_stmt|invocation_stmt))? SEMI;
-var_cons_list: var_cons_name (COMA var_cons_name)* SEMI;
+var_cons_list: var_cons_name (COMA var_cons_name)*;
 var_cons_name: ID;
 Var_word: VAR;
 Val_word: VAL;
@@ -53,7 +53,8 @@ Val_word: VAL;
 //All type of stmts
 stmt: as_stmt | if_stmt | loop_for_stmt | break_stmt | return_stmt | invocation_stmt;
 as_stmt: index_expr (Colon Assign_op) (expr|new_val_from_class_stmt|invocation_stmt) SEMI; // Assignmet stmt
-new_val_from_class_stmt: KEYWORD_NEW class_name LP expr_list RP;
+new_val_from_class_stmt: Keyword_new class_name LP expr_list? RP;
+Keyword_new: KEYWORD_NEW;
 
 //If stmt
 if_stmt: (If_word expr Then_word block_stmt) (Elseif_word  expr block_stmt)* (Else_word block_stmt)?;
@@ -63,11 +64,12 @@ Else_word: ELSE;
 Elseif_word: ELSEIF;
 
 //Loop (For) stmt
-loop_for_stmt: For_word (ID Colon Assign_op INTLIT) (To_word|DOWNTO) (INTLIT) Do_word block_stmt;
+loop_for_stmt: For_word (ID Colon Assign_op INTLIT) (To_word|Down_to_word) (INTLIT) Do_word block_stmt;
 For_word: FOR;
 Assign_op: ASSIGN_OP;
 To_word: TO;
 Do_word: DO;
+Down_to_word: DOWNTO;
 
 //Instance/static (member_access_in/member_access_out) method invocation
 invocation_stmt: (index_expr|ID LP (expr|invocation_stmt) RP) SEMI?;
@@ -77,7 +79,8 @@ break_stmt: Break_word SEMI;
 Break_word: BREAK;
 
 // RETURN STMT
-return_stmt: RETURN (expr|invocation_stmt)? SEMI;
+return_stmt: Return_word (expr|invocation_stmt)? SEMI;
+Return_word: RETURN;
 //-------------------------------------------------------
 
 

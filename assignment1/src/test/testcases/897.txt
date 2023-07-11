@@ -1,0 +1,7 @@
+
+            class Shape {
+                static float getArea() {
+                    return abc * def;
+                }
+            }
+        

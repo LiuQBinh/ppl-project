@@ -1,0 +1,15 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                  if a > 2 then {
+                      a := 111;
+                  } elseif a < -1 then {
+                      a := 000;
+                  } else then {
+                      a := 222;
+                  }
+                }
+            }
+        
