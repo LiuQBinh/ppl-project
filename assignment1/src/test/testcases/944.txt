@@ -1,0 +1,7 @@
+
+                if a > 2 then {
+                    a := 111;
+                } else then {
+                    a := 222;
+                }
+            

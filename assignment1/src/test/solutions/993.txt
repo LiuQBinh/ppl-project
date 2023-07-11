@@ -1,0 +1,1 @@
+for,i,:,=,2232,to,12121,do,{,sqrt,(,this,.,length,+,this,.,width,),;,},<EOF>

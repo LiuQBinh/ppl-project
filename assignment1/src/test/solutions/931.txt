@@ -1,0 +1,1 @@
+class,Shape,{,int,numOfShape,=,0,;,},<EOF>

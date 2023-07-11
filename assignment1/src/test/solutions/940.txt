@@ -1,0 +1,1 @@
+class,Rectangle,{,static,final,float,getArea,(,),{,return,this,.,length,*,this,.,width,;,},},class,Rectangle2,{,static,final,float,getArea,(,),{,return,this,.,length,*,this,.,width,;,},},<EOF>

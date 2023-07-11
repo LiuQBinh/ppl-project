@@ -1,0 +1,7 @@
+
+                    if(i > 2) then {
+                        sqrt(sqrt(this.length + this.width));
+                    } else {
+                        return;
+                    }
+                

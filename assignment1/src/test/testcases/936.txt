@@ -1,0 +1,7 @@
+
+                class Rectangle {
+                    float getArea() {
+                        return this.length*this.width;
+                    }
+                }
+            
