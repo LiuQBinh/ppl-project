@@ -11,7 +11,7 @@ grammar BKOOL;
 options{
 	language=Python3;
 }
-program: (class_decl+ EOF)|idlist; // the ID for cheat bkel
+program: (class_decl+ EOF); // the ID for cheat bkel
 // ---------------------------------- MY PATH START
 // class declaration _ start
 class_decl: Class_word class_name (Extends_word class_name)? LB member_lists* RB;

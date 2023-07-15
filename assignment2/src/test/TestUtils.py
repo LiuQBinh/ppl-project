@@ -119,6 +119,8 @@ class TestAST:
         tokens = CommonTokenStream(lexer)
         parser = Parser(tokens)
         tree = parser.program()
+        from antlr4.tree.Trees import Trees
+        print('psppspsp', Trees.toStringTree(tree, None, parser))
         asttree = ASTGeneration().visit(tree)
         dest.write(str(asttree))
         dest.close()
