@@ -1,0 +1,7 @@
+
+            class Shape1 {
+                getArea() {
+                    return self.length * self.width;
+                }
+            }
+        

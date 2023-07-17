@@ -1,0 +1,9 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                   a := ((a + b + c) / (a * b * c)) + ((a + b + c) / (a * b * c));
+                }
+            }
+        

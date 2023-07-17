@@ -1,0 +1,14 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                  for i:=2232 downto 12121 do {
+                      a := 1;
+                      if a > 2 then {
+                          a := 111;
+                      }
+                  }
+                }
+            }
+        

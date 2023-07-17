@@ -1,0 +1,11 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                    for i:=2232 to 12121 do {
+                        sqrt(this.length + this.width);
+                    }
+                }
+            }
+        

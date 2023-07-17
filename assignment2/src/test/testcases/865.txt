@@ -1,0 +1,30 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                      # for i:=2232 downto 12121 do {
+                      #     if a > 2 then {
+                      #         a := 111;
+                      #     } elseif a < -1 {
+                      #         a := 000;
+                      #     } else {
+                      #         a := 222;
+                      #     }
+                      #     id.write(aa);
+                      #     return;
+                      # }
+                      for i:=2232 downto 12121 do {
+                          if a > 2 then {
+                              a := 111;
+                          } elseif a < -1 {
+                              a := 000;
+                          } else {
+                              a := 222;
+                          }
+                          id.write(aa);
+                          return;
+                      }
+                }
+            }
+        

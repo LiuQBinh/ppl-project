@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/utils/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/utils/AST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/ParserSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ParserSuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/201.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/202.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/202.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/203.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/300.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/300.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/301.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/202.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/202.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/301.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/302.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" afterDir="false" />
-    </list>
+    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +119,7 @@
       <workItem from="1689082057090" duration="762000" />
       <workItem from="1689082971156" duration="3380000" />
       <workItem from="1689489228384" duration="1271000" />
-      <workItem from="1689601102656" duration="10668000" />
+      <workItem from="1689601102656" duration="11272000" />
     </task>
     <task id="LOCAL-00001" summary="add ass 1">
       <created>1687532415649</created>
@@ -349,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689405822024</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1689613640777</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1689613640777</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

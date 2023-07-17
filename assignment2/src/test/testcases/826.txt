@@ -1,0 +1,11 @@
+
+            class Shape {
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                    if(i > 2) then {
+                        sqrt(sqrt(this.length + this.width));
+                    }
+                }
+            }
+        

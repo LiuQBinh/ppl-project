@@ -1,0 +1,8 @@
+
+            class Shape1 {
+                static final int numOfShape = 0;
+                getArea() {
+                    return self.length * self.width;
+                }
+            }
+        

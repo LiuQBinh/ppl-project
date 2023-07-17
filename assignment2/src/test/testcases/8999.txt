@@ -1,0 +1,7 @@
+
+            class Shape {
+                static float getArea() {
+                    return array(array(1, 2), array(3, 4));
+                }
+            }
+        
