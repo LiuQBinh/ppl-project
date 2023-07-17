@@ -80,6 +80,11 @@ class TestParser:
         TestParser.check(SOL_DIR,inputfile,num)
         dest = open(SOL_DIR + str(num) + ".txt","r")
         line = dest.read()
+
+        if line != expect:
+            print('linelinelinelinelineline', num, line)
+            print('expectexpectexpectexpect', num, expect)
+            print('-')
         return line == expect
 
     @staticmethod
@@ -110,6 +115,9 @@ class TestAST:
         line = dest.read()
         if line != expect:
             print(line+"*"+expect+"*")
+
+        print('linelinelinelinelinelinelinelinelinelineline', line)
+        print('expectexpectexpectexpectexpectexpectexpectex', expect)
         return line == expect
 
     @staticmethod
@@ -120,7 +128,6 @@ class TestAST:
         parser = Parser(tokens)
         tree = parser.program()
         from antlr4.tree.Trees import Trees
-        print('psppspsp', Trees.toStringTree(tree, None, parser))
         asttree = ASTGeneration().visit(tree)
         dest.write(str(asttree))
         dest.close()

@@ -21,7 +21,7 @@ class_name: ID | Prog_word | CLASS | Main_word;
 //       float length, width = 2.2222;
 //       float height = 2.2222;
 //       boolean isHaveBackground = false;
-//       float getArea(){
+//       float getArea() {
 //           return this.length*this.width;
 //       }
 //   }
@@ -30,8 +30,13 @@ Prog_word: PROGRAM;
 Extends_word: EXTENDS;
 member_lists: attributes | methods | instructor;
 instructor: class_name LP (paramlist)? RP block_stmt;
-attributes: (Static_word)? (Final_word)? primitive_Type idlist (Assign_op operands)? SEMI;
-methods: (Static_word)? (Final_word)? (primitive_Type|Void_word) (ID|Main_word) LP (paramlist)? RP block_stmt;
+methods: class_props_kind methods_return_types methods_name LP (paramlist)? RP block_stmt;
+methods_name: (ID|Main_word);
+methods_return_types: types|Void_word;
+
+attributes: class_props_kind types idlist (Assign_op operands)? SEMI;
+class_props_kind: (Static_word)? (Final_word)?;
+
 Static_word: STATIC;
 Final_word: FINAL;
 Void_word: VOID;
@@ -189,8 +194,8 @@ Self_word: SELF;
 
 
 // identifier - start
-idlist: ID (COMA ID)*;
 ID: NORM_ID | SPEC_ID;
+idlist: ID (COMA ID)*;
 fragment NORM_ID: [a-zA-Z_][a-zA-Z0-9_]*;
 fragment SPEC_ID: '$'[a-zA-Z0-9_]+;
 // identifier _ end
