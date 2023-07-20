@@ -1,5 +1,7 @@
-class test {
-            void getArea(int a, int b) {
-                return self.length * self.width;
+class Shape {
+            static float getArea() {
+                int a := 1;
+                final float a := 2;
+                return this.length*this.width;
             }
         }

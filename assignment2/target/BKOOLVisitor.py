@@ -69,18 +69,18 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#var_cons_decl.
-    def visitVar_cons_decl(self, ctx:BKOOLParser.Var_cons_declContext):
+    # Visit a parse tree produced by BKOOLParser#delc.
+    def visitDelc(self, ctx:BKOOLParser.DelcContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#var_cons_list.
-    def visitVar_cons_list(self, ctx:BKOOLParser.Var_cons_listContext):
+    # Visit a parse tree produced by BKOOLParser#cons_decl.
+    def visitCons_decl(self, ctx:BKOOLParser.Cons_declContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#var_cons_name.
-    def visitVar_cons_name(self, ctx:BKOOLParser.Var_cons_nameContext):
+    # Visit a parse tree produced by BKOOLParser#var_decl.
+    def visitVar_decl(self, ctx:BKOOLParser.Var_declContext):
         return self.visitChildren(ctx)
 
 
@@ -144,11 +144,6 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#element_type.
-    def visitElement_type(self, ctx:BKOOLParser.Element_typeContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by BKOOLParser#array_size.
     def visitArray_size(self, ctx:BKOOLParser.Array_sizeContext):
         return self.visitChildren(ctx)
@@ -171,6 +166,11 @@ class BKOOLVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BKOOLParser#param_decl.
     def visitParam_decl(self, ctx:BKOOLParser.Param_declContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BKOOLParser#init_value.
+    def visitInit_value(self, ctx:BKOOLParser.Init_valueContext):
         return self.visitChildren(ctx)
 
 
@@ -241,6 +241,11 @@ class BKOOLVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BKOOLParser#piority_exp.
     def visitPiority_exp(self, ctx:BKOOLParser.Piority_expContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BKOOLParser#array_exp.
+    def visitArray_exp(self, ctx:BKOOLParser.Array_expContext):
         return self.visitChildren(ctx)
 
 

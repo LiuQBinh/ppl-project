@@ -30,9 +30,11 @@ class ASTGenSuite(unittest.TestCase):
 
     def test_class_with_methods(self):
         """More complex program"""
-        input = """class test {
-            void getArea(int a, int b) {
-                return self.length * self.width;
+        input = """class Shape {
+            static float getArea() {
+                int a := 1;
+                final float a := 2;
+                return this.length*this.width;
             }
         }"""
         expect = str(Program([ClassDecl(Id("main"),

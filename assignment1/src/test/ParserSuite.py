@@ -1112,7 +1112,7 @@ class ParserSuite(unittest.TestCase):
                 static finaaaaaaaal int numOfShape2 = 0;
             }
         """
-        expect = "Error on line 4 col 23: finaaaaaaaal"
+        expect = "Error on line 4 col 36: int"
         self.assertTrue(TestParser.test(input, expect, 880))
     def test_declare_class_with_method_final_static_error(self):
         input = """

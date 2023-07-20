@@ -21,7 +21,7 @@ class_name: ID | Prog_word | CLASS | Main_word;
 //       float length, width = 2.2222;
 //       float height = 2.2222;
 //       boolean isHaveBackground = false;
-//       float getArea(){
+//       float getArea() {
 //           return this.length*this.width;
 //       }
 //   }
@@ -30,25 +30,27 @@ Prog_word: PROGRAM;
 Extends_word: EXTENDS;
 member_lists: attributes | methods | instructor;
 instructor: class_name LP (paramlist)? RP block_stmt;
-attributes: (Static_word)? (Final_word)? primitive_Type idlist (Assign_op operands)? SEMI;
-methods: (Static_word)? (Final_word)? (primitive_Type|Void_word) (ID|Main_word) LP (paramlist)? RP block_stmt;
-Static_word: STATIC;
-Final_word: FINAL;
-Void_word: VOID;
+methods: class_props_kind methods_return_types methods_name LP (paramlist)? RP block_stmt;
+methods_name: (ID|Main_word);
+methods_return_types: types|Void_word;
+
+attributes: class_props_kind types idlist (Assign_op expr)? SEMI;
+class_props_kind: (Static_word)? (Final_word)?;
+
 // class declaration _ end
 
 //-------------------------------------------------------
 //This is praser rules for block stmts
 block_stmt: (block_stmt_list) | (LB block_stmt_list* RB);
-block_stmt_list: (stmt | var_cons_decl | var_cons_list); //including stmts and variables/constants declaration
+block_stmt_list: (stmt | delc); //including stmts and variables/constants declaration
 
 //Rules for variables/constants
-var_cons_decl: (Var_word | Val_word) idlist Colon types (Assign_op expr_list)? SEMI
-            | paramlist ( (Colon Assign_op) (expr|new_val_from_class_stmt|invocation_stmt))? SEMI;
-var_cons_list: var_cons_name (COMA var_cons_name)*;
-var_cons_name: ID;
-Var_word: VAR;
-Val_word: VAL;
+delc: cons_decl | var_decl;
+cons_decl: Final_word var_decl;
+var_decl: paramlist SEMI;
+Static_word: STATIC;
+Final_word: FINAL;
+Void_word: VOID;
 
 //All type of stmts
 stmt: as_stmt | if_stmt | loop_for_stmt | break_stmt | return_stmt | invocation_stmt;
@@ -121,7 +123,6 @@ Str_word: STRING;
 //array_Type: Array_word LSB (element_type COMA array_size)? RSB;
 array_Type: primitive_Type LSB (array_size)? RSB;
 Array_word: ARRAY;
-element_type: primitive_Type | array_Type;
 array_size: INTLIT;
 Main_word: MAIN;
 Cons_word: CONS;
@@ -141,7 +142,8 @@ attribute_name: ID;
 
 //Rules for variables/constants
 paramlist: param_decl (COMA param_decl)*;
-param_decl: (types idlist)|(ID Colon class_name);
+param_decl: (types idlist) (Colon Assign_op init_value)?;
+init_value: (expr|new_val_from_class_stmt|invocation_stmt);
 
 //Rules for expressions, very complicated
 expr_list: expr (COMA expr)*;
@@ -182,15 +184,18 @@ class_expr: KEYWORD_NEW class_expr LP expr_list? RP
 | piority_exp;
 
 piority_exp: LP expr RP
-| operands;
+| array_exp;
+
+array_exp: LB operands (COMA operands)* RB
+    | operands;
 
 operands: INTLIT | FLOATLIT | BOOLEANLIT | STRINGLIT | arrayLIT | multi_ArrayLIT | ID | Self_word | class_name | THIS;
 Self_word: SELF;
 
 
 // identifier - start
-idlist: ID (COMA ID)*;
 ID: NORM_ID | SPEC_ID;
+idlist: ID (COMA ID)*;
 fragment NORM_ID: [a-zA-Z_][a-zA-Z0-9_]*;
 fragment SPEC_ID: '$'[a-zA-Z0-9_]+;
 // identifier _ end
