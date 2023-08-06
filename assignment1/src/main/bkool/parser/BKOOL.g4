@@ -46,7 +46,7 @@ block_stmt_list: (stmt | delc); //including stmts and variables/constants declar
 
 //Rules for variables/constants
 delc: cons_decl | var_decl;
-cons_decl: Final_word var_decl;
+cons_decl: Final_word paramlist SEMI;
 var_decl: paramlist SEMI;
 Static_word: STATIC;
 Final_word: FINAL;
@@ -148,10 +148,7 @@ init_value: (expr|new_val_from_class_stmt|invocation_stmt);
 //Rules for expressions, very complicated
 expr_list: expr (COMA expr)*;
 
-expr: string_expr;
-
-string_expr: relational_expr (String_comp | String_concat) relational_expr
-| relational_expr;
+expr: relational_expr;
 
 relational_expr: logical_expr (Equal | Diff | Greater | Lesser | Greater_euqal | Lesser_equal) logical_expr
 | logical_expr;

@@ -108,7 +108,7 @@ class ASTGeneration(BKOOLVisitor):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#delc.
-    def visitDelc(self, ctx:BKOOLParser.DelcContext):
+    def visitDelc(self, ctx: BKOOLParser.DelcContext):
         if ctx.cons_decl() is not None:
             return self.visit(ctx.cons_decl())
         if ctx.var_decl() is not None:
@@ -138,12 +138,34 @@ class ASTGeneration(BKOOLVisitor):
             )
             for param_decl in array_param_decl
         ]
+
     # Visit a parse tree produced by BKOOLParser#var_cons_name.
     def visitInit_value(self, ctx: BKOOLParser.Init_valueContext):
         return ctx.getText()
 
     # Visit a parse tree produced by BKOOLParser#stmt.
     def visitStmt(self, ctx: BKOOLParser.StmtContext):
+        if ctx.as_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.if_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.loop_for_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.break_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.return_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.invocation_stmt() is not None:
+            return self.visitChildren(ctx)
+
+        if ctx.getRuleIndex() is not None:
+            return self.visitChildren(ctx)
+
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#as_stmt.
@@ -172,7 +194,10 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#return_stmt.
     def visitReturn_stmt(self, ctx: BKOOLParser.Return_stmtContext):
-        return self.visitChildren(ctx)
+        expr = ctx.expr()
+        if expr is not None:
+            return self.visit(expr)
+        return self.visit(ctx.invocation_stmt())
 
     # Visit a parse tree produced by BKOOLParser#types.
     def visitTypes(self, ctx: BKOOLParser.TypesContext):
@@ -203,8 +228,8 @@ class ASTGeneration(BKOOLVisitor):
         return ArrayType(self.visit(ctx.primitive_Type()), arr_size)
 
     # Visit a parse tree produced by BKOOLParser#array_size.
-    # def visitArray_size(self, ctx:BKOOLParser.Array_sizeContext):
-    #     return self.visitChildren(ctx)
+    def visitArray_size(self, ctx: BKOOLParser.Array_sizeContext):
+        return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#attribute_list.
     def visitAttribute_list(self, ctx: BKOOLParser.Attribute_listContext):
@@ -222,16 +247,16 @@ class ASTGeneration(BKOOLVisitor):
     def visitParam_decl(self, ctx: BKOOLParser.Param_declContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by BKOOLParser#init_value.
+    def visitInit_value(self, ctx: BKOOLParser.Init_valueContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by BKOOLParser#expr_list.
     def visitExpr_list(self, ctx: BKOOLParser.Expr_listContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#expr.
     def visitExpr(self, ctx: BKOOLParser.ExprContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by BKOOLParser#string_expr.
-    def visitString_expr(self, ctx: BKOOLParser.String_exprContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#relational_expr.
@@ -276,6 +301,10 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#piority_exp.
     def visitPiority_exp(self, ctx: BKOOLParser.Piority_expContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by BKOOLParser#array_exp.
+    def visitArray_exp(self, ctx: BKOOLParser.Array_expContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#operands.

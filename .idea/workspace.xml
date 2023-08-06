@@ -8,34 +8,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLVisitor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/src/test/ParserSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/test/ParserSuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/src/test/solutions/880.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/test/solutions/880.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOL.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOL.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment1/target/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/target/BKOOLVisitor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/302.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/302.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +92,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\luuqu\AppData\Local\Programs\Python\Python311\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignment2/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -154,7 +140,13 @@
       <workItem from="1689601102656" duration="11569000" />
       <workItem from="1689698564614" duration="4320000" />
       <workItem from="1689769927334" duration="9795000" />
-      <workItem from="1689861186813" duration="7779000" />
+      <workItem from="1689861186813" duration="8129000" />
+      <workItem from="1689967710924" duration="363000" />
+      <workItem from="1689968225414" duration="26000" />
+      <workItem from="1689968258830" duration="11000" />
+      <workItem from="1690821466819" duration="647000" />
+      <workItem from="1691213825768" duration="7580000" />
+      <workItem from="1691292393286" duration="2188000" />
     </task>
     <task id="LOCAL-00001" summary="add ass 1">
       <created>1687532415649</created>
@@ -376,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689613866798</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1689870236795</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689870236795</updated>
+    </task>
+    <task id="LOCAL-00033" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1689870250505</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1689870250505</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,18 +418,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>210</line>
-          <option name="timeStamp" value="83" />
+          <line>89</line>
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>119</line>
-          <option name="timeStamp" value="142" />
+          <line>95</line>
+          <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>142</line>
-          <option name="timeStamp" value="143" />
+          <line>204</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
+          <line>146</line>
+          <option name="timeStamp" value="165" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -441,7 +459,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ppl_project$.coverage" NAME=" Coverage Results" MODIFIED="1689405763747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/test" />
     <SUITE FILE_PATH="coverage/ppl_project$TestUtils.coverage" NAME="TestUtils Coverage Results" MODIFIED="1689405686554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/test" />
-    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1689869408191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
+    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1691295396525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
     <SUITE FILE_PATH="coverage/ppl_project$ASTGeneration.coverage" NAME="ASTGeneration Coverage Results" MODIFIED="1689405743776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/main/bkool/astgen" />
     <SUITE FILE_PATH="coverage/ppl_project$BKOOLLexer.coverage" NAME="BKOOLLexer Coverage Results" MODIFIED="1688839923648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment1/src/main/bkool/parser" />
   </component>

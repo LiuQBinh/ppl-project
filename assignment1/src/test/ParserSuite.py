@@ -986,7 +986,7 @@ class ParserSuite(unittest.TestCase):
                       } else {
                           a := 222;
                       }
-                  }
+                  } 
                 }
             }
         """

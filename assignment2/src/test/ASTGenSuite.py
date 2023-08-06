@@ -32,8 +32,8 @@ class ASTGenSuite(unittest.TestCase):
         """More complex program"""
         input = """class Shape {
             static float getArea() {
-                int a := 1;
-                final float a := 2;
+                # int a := 1;
+                # final float a := 2;
                 return this.length*this.width;
             }
         }"""

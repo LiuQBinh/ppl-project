@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),static,[],FloatType,Block([[VarDecl(variable=Id(name='a'), varType='IntType', varInit='1')],[ConstDecl(constant=Id(name='a'), constType='FloatType', value='2')]],[None]))])])
