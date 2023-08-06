@@ -7,6 +7,12 @@ class InitValue(Type):
     def __str__(self):
         return "InitValue"
 
+class IndexExpr(Expr):
+    object: str
+    props: str
+
+    def __str__(self):
+        return "IndexExpr(" + self.object + ',' + self.props + ")"
 
 class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#program.

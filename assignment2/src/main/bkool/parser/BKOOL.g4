@@ -171,11 +171,15 @@ logical_not_expr: Not logical_not_expr
 sign_expr: Sub sign_expr
 | index_expr;
 
-index_expr: index_expr (LSB expr RSB)+
-| member_access_in;
-
-member_access_in: member_access_in Member_access_in_ope class_expr (LP expr_list? RP)?
+index_expr: index_expr
+        (
+            (LSB expr RSB)+|
+            Member_access_in_ope class_expr (LP expr_list? RP)?
+        )
 | class_expr;
+
+//member_access_in: member_access_in Member_access_in_ope class_expr (LP expr_list? RP)?
+//| class_expr;
 
 // member_access_out: class_expr Member_access_out class_expr (LP expr_list? RP)?
 // | class_expr;
