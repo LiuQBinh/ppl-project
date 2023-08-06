@@ -34,7 +34,7 @@ class ASTGenSuite(unittest.TestCase):
             static float getArea() {
                 # int a := 1;
                 # final float a := 2;
-                return this.length*this.width;
+                return a + 2;
             }
         }"""
         expect = str(Program([ClassDecl(Id("main"),

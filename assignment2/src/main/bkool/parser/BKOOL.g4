@@ -148,7 +148,10 @@ init_value: (expr|new_val_from_class_stmt|invocation_stmt);
 //Rules for expressions, very complicated
 expr_list: expr (COMA expr)*;
 
-expr: relational_expr;
+expr: string_expr;
+
+string_expr: relational_expr (String_comp | String_concat) relational_expr
+| relational_expr;
 
 relational_expr: logical_expr (Equal | Diff | Greater | Lesser | Greater_euqal | Lesser_equal) logical_expr
 | logical_expr;
@@ -171,11 +174,11 @@ sign_expr: Sub sign_expr
 index_expr: index_expr (LSB expr RSB)+
 | member_access_in;
 
-member_access_in: member_access_in Member_access_in member_access_out (LP expr_list? RP)?
-| member_access_out;
-
-member_access_out: class_expr Member_access_out class_expr (LP expr_list? RP)?
+member_access_in: member_access_in Member_access_in_ope class_expr (LP expr_list? RP)?
 | class_expr;
+
+// member_access_out: class_expr Member_access_out class_expr (LP expr_list? RP)?
+// | class_expr;
 
 class_expr: KEYWORD_NEW class_expr LP expr_list? RP
 | piority_exp;
@@ -213,7 +216,7 @@ Greater_euqal: GREATER_EQUAL_OP;
 Lesser_equal: LESS_EQUAL_OP;
 String_comp: STRING_COMP_OP;
 String_concat: STRING_CONCAT_OP;
-Member_access_in: DOT;
+Member_access_in_ope: DOT;
 Member_access_out: MEMBER_ACCESS_OUT;
 Colon: COLON;
 
