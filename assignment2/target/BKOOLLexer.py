@@ -463,7 +463,7 @@ class BKOOLLexer(Lexer):
     Lesser_equal = 45
     String_comp = 46
     String_concat = 47
-    Member_access_in = 48
+    Member_access_in_ope = 48
     Member_access_out = 49
     Colon = 50
     BOOLEANLIT = 51
@@ -565,7 +565,7 @@ class BKOOLLexer(Lexer):
             "Str_word", "Array_word", "Main_word", "Cons_word", "Dest_word", 
             "Self_word", "ID", "Add", "Sub", "Mul", "Div", "Mod", "Not", 
             "And", "Or", "Equal", "Diff", "Greater", "Lesser", "Greater_euqal", 
-            "Lesser_equal", "String_comp", "String_concat", "Member_access_in", 
+            "Lesser_equal", "String_comp", "String_concat", "Member_access_in_ope", 
             "Member_access_out", "Colon", "BOOLEANLIT", "STRINGLIT", "BLOCKCOMMENT", 
             "INTLIT", "FLOATLIT", "PROGRAM", "MAIN", "EXTENDS", "BREAK", 
             "CONT", "IF", "ELSEIF", "ELSE", "FOR", "BOOLTRUE", "BOOLFALSE", 
@@ -588,7 +588,7 @@ class BKOOLLexer(Lexer):
                   "Cons_word", "Dest_word", "Self_word", "ID", "NORM_ID", 
                   "SPEC_ID", "Add", "Sub", "Mul", "Div", "Mod", "Not", "And", 
                   "Or", "Equal", "Diff", "Greater", "Lesser", "Greater_euqal", 
-                  "Lesser_equal", "String_comp", "String_concat", "Member_access_in", 
+                  "Lesser_equal", "String_comp", "String_concat", "Member_access_in_ope", 
                   "Member_access_out", "Colon", "BOOLEANLIT", "STRINGLIT", 
                   "ESC_SEQ", "ILL_ESC_SEQ", "OCTAL_ESC", "UNICODE_ESC", 
                   "HEX_DIGIT", "UNKNOW_ESC", "BLOCKCOMMENT", "INTLIT", "FLOATLIT", 

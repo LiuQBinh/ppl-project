@@ -229,11 +229,6 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#member_access_out.
-    def visitMember_access_out(self, ctx:BKOOLParser.Member_access_outContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by BKOOLParser#class_expr.
     def visitClass_expr(self, ctx:BKOOLParser.Class_exprContext):
         return self.visitChildren(ctx)

@@ -224,8 +224,7 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#array_Type.
     def visitArray_Type(self, ctx: BKOOLParser.Array_TypeContext):
-        arr_size = ctx.array_size().getText() if ctx.array_size() is not None else 'None'
-        return ArrayType(self.visit(ctx.primitive_Type()), arr_size)
+        return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#array_size.
     def visitArray_size(self, ctx: BKOOLParser.Array_sizeContext):
@@ -257,17 +256,15 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#expr.
     def visitExpr(self, ctx: BKOOLParser.ExprContext):
-        return self.visit(ctx.string_expr())
+        return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#string_expr.
     def visitString_expr(self, ctx: BKOOLParser.String_exprContext):
         relational_expr = ctx.relational_expr()
         if isinstance(relational_expr, BKOOLParser.Relational_exprContext):
             return self.visit(relational_expr)
-
         if relational_expr.__len__() == 1:
             return self.visit(relational_expr[0])
-
         str = ''
         for re in relational_expr:
             str = str + re.getText()
@@ -278,11 +275,8 @@ class ASTGeneration(BKOOLVisitor):
         relational_expr = ctx.logical_expr()
         if isinstance(relational_expr, BKOOLParser.Logical_exprContext):
             return self.visit(relational_expr)
-
         if relational_expr.__len__() == 1:
             return self.visit(relational_expr[0])
-
-
         ope = ''
         if ctx.Equal() is not None:
             ope = '=='
@@ -296,7 +290,6 @@ class ASTGeneration(BKOOLVisitor):
             ope = '>='
         if ctx.Lesser_equal() is not None:
             ope = '<='
-
         return BooleanLiteral(self.visit(relational_expr[0]) + ope + self.visit(relational_expr[1]))
 
     # Visit a parse tree produced by BKOOLParser#logical_expr.
@@ -304,16 +297,13 @@ class ASTGeneration(BKOOLVisitor):
         adding_expr = ctx.adding_expr()
         if isinstance(adding_expr, BKOOLParser.Adding_exprContext):
             return self.visit(adding_expr)
-
         if adding_expr.__len__() == 1:
             return self.visit(adding_expr[0])
-
         ope = ''
         if ctx.And() is not None:
             ope = '&&'
         if ctx.Or() is not None:
             ope = '||'
-
         return BooleanLiteral(self.visit(adding_expr[0]) + ope + self.visit(adding_expr[1]))
 
     # Visit a parse tree produced by BKOOLParser#adding_expr.
@@ -325,9 +315,7 @@ class ASTGeneration(BKOOLVisitor):
                 ope = '+'
             if ctx.Sub() is not None:
                 ope = '-'
-
             return BinaryOp(self.visit(adding_expr), ope, self.visit(ctx.multiplying_expr()))
-
         return self.visit(ctx.multiplying_expr())
 
     # Visit a parse tree produced by BKOOLParser#multiplying_expr.
@@ -342,7 +330,6 @@ class ASTGeneration(BKOOLVisitor):
             if ctx.Mod() is not None:
                 ope = '%'
             return BinaryOp(self.visit(multiplying_expr), ope, self.visit(ctx.logical_not_expr()))
-
         return self.visit(ctx.logical_not_expr())
 
     # Visit a parse tree produced by BKOOLParser#logical_not_expr.
@@ -368,10 +355,6 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#member_access_in.
     def visitMember_access_in(self, ctx: BKOOLParser.Member_access_inContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by BKOOLParser#member_access_out.
-    def visitMember_access_out(self, ctx: BKOOLParser.Member_access_outContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#class_expr.

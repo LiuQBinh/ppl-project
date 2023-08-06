@@ -173,7 +173,7 @@ Greater_euqal
 Lesser_equal
 String_comp
 String_concat
-Member_access_in
+Member_access_in_ope
 Member_access_out
 Colon
 BOOLEANLIT
@@ -300,7 +300,7 @@ Greater_euqal
 Lesser_equal
 String_comp
 String_concat
-Member_access_in
+Member_access_in_ope
 Member_access_out
 Colon
 BOOLEANLIT
