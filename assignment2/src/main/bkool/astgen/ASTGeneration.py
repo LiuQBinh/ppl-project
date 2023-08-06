@@ -257,7 +257,7 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#expr.
     def visitExpr(self, ctx: BKOOLParser.ExprContext):
-        return self.visitChildren(ctx)
+        return self.visit(ctx.relational_expr())
 
     # Visit a parse tree produced by BKOOLParser#relational_expr.
     def visitRelational_expr(self, ctx: BKOOLParser.Relational_exprContext):
