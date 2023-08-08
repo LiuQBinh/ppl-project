@@ -220,16 +220,9 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#invocation_stmt.
     def visitInvocation_stmt(self, ctx: BKOOLParser.Invocation_stmtContext):
-        index_expr = ctx.index_expr()
         ID = ctx.ID()
         expr = ctx.expr()
         invocation_stmt = ctx.invocation_stmt()
-
-        obj = None
-        if index_expr is not None:
-            obj = self.visit(index_expr)
-        if ID is not None:
-            obj = self.visit(ID)
 
         param = None
         if expr is not None:
@@ -238,7 +231,7 @@ class ASTGeneration(BKOOLVisitor):
             param = self.visit(invocation_stmt)
 
 
-        return CallExpr(obj, '', param if param is not None else '')
+        return CallExpr(Id(ID.getText()), NullLiteral(), param)
 
     # Visit a parse tree produced by BKOOLParser#break_stmt.
     def visitBreak_stmt(self, ctx: BKOOLParser.Break_stmtContext):
