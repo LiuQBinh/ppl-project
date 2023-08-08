@@ -1,18 +1,32 @@
 from BKOOLVisitor import BKOOLVisitor
 from BKOOLParser import BKOOLParser
 from AST import *
+from dataclasses import dataclass
 import collections.abc
+from abc import ABC
+
 
 class InitValue(Type):
     def __str__(self):
         return "InitValue"
 
-class IndexExpr(Expr):
-    object: str
+@dataclass
+class IndexExpr():
+    data: str
     props: str
 
     def __str__(self):
-        return "IndexExpr(" + self.object + ',' + self.props + ")"
+        a = self.data
+        b = self.props
+        return "IndexExpr(" + str(self.data) + "," + str(self.props) + ")"
+
+
+    def __str__(self):
+        a = self.data
+        b =self.props
+        if isinstance(b, CallExpr):
+            return "IndexExpr(" + str(self.data) + ',' + b.data.data.__str__() + ")"
+        return "IndexExpr(" + self.data + ',' + self.props + ")"
 
 class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#program.
@@ -176,11 +190,25 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#as_stmt.
     def visitAs_stmt(self, ctx: BKOOLParser.As_stmtContext):
-        return self.visitChildren(ctx)
+        rightExpr = None
+        expr = ctx.expr()
+        if expr is not None:
+            rightExpr = expr
+        new_val_from_class_stmt = ctx.new_val_from_class_stmt()
+        if new_val_from_class_stmt is not None:
+            rightExpr = new_val_from_class_stmt
+        invocation_stmt = ctx.invocation_stmt()
+        if invocation_stmt is not None:
+            rightExpr = invocation_stmt
+
+        return Assign(self.visit(ctx.index_expr()), self.visit(rightExpr))
 
     # Visit a parse tree produced by BKOOLParser#new_val_from_class_stmt.
     def visitNew_val_from_class_stmt(self, ctx: BKOOLParser.New_val_from_class_stmtContext):
-        return self.visitChildren(ctx)
+        return NewExpr(
+            Id(ctx.class_name().getText()),
+            [(self.visit(x)) for x in ctx.expr_list().expr()]
+        )
 
     # Visit a parse tree produced by BKOOLParser#if_stmt.
     def visitIf_stmt(self, ctx: BKOOLParser.If_stmtContext):
@@ -192,7 +220,25 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#invocation_stmt.
     def visitInvocation_stmt(self, ctx: BKOOLParser.Invocation_stmtContext):
-        return self.visitChildren(ctx)
+        index_expr = ctx.index_expr()
+        ID = ctx.ID()
+        expr = ctx.expr()
+        invocation_stmt = ctx.invocation_stmt()
+
+        obj = None
+        if index_expr is not None:
+            obj = self.visit(index_expr)
+        if ID is not None:
+            obj = self.visit(ID)
+
+        param = None
+        if expr is not None:
+            param = self.visit(expr)
+        if invocation_stmt is not None:
+            param = self.visit(invocation_stmt)
+
+
+        return CallExpr(obj, '', param if param is not None else '')
 
     # Visit a parse tree produced by BKOOLParser#break_stmt.
     def visitBreak_stmt(self, ctx: BKOOLParser.Break_stmtContext):
@@ -258,11 +304,12 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#expr_list.
     def visitExpr_list(self, ctx: BKOOLParser.Expr_listContext):
+        # return [Expr(self.visit(x)) for x in ctx.class_decl()]
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#expr.
     def visitExpr(self, ctx: BKOOLParser.ExprContext):
-        return self.visitChildren(ctx)
+        return self.visit(ctx.string_expr())
 
     # Visit a parse tree produced by BKOOLParser#string_expr.
     def visitString_expr(self, ctx: BKOOLParser.String_exprContext):
@@ -296,7 +343,7 @@ class ASTGeneration(BKOOLVisitor):
             ope = '>='
         if ctx.Lesser_equal() is not None:
             ope = '<='
-        return BooleanLiteral(self.visit(relational_expr[0]) + ope + self.visit(relational_expr[1]))
+        return BinaryOp(ope, self.visit(relational_expr[0]), self.visit(relational_expr[1]))
 
     # Visit a parse tree produced by BKOOLParser#logical_expr.
     def visitLogical_expr(self, ctx: BKOOLParser.Logical_exprContext):
@@ -321,7 +368,7 @@ class ASTGeneration(BKOOLVisitor):
                 ope = '+'
             if ctx.Sub() is not None:
                 ope = '-'
-            return BinaryOp(self.visit(adding_expr), ope, self.visit(ctx.multiplying_expr()))
+            return BinaryOp(ope, self.visit(adding_expr), self.visit(ctx.multiplying_expr()))
         return self.visit(ctx.multiplying_expr())
 
     # Visit a parse tree produced by BKOOLParser#multiplying_expr.
@@ -335,7 +382,7 @@ class ASTGeneration(BKOOLVisitor):
                 ope = '/'
             if ctx.Mod() is not None:
                 ope = '%'
-            return BinaryOp(self.visit(multiplying_expr), ope, self.visit(ctx.logical_not_expr()))
+            return BinaryOp(ope, self.visit(multiplying_expr), self.visit(ctx.logical_not_expr()))
         return self.visit(ctx.logical_not_expr())
 
     # Visit a parse tree produced by BKOOLParser#logical_not_expr.
@@ -353,31 +400,81 @@ class ASTGeneration(BKOOLVisitor):
         return self.visit(ctx.index_expr())
 
     # Visit a parse tree produced by BKOOLParser#index_expr.
-    def visitIndex_expr(self, ctx: BKOOLParser.Index_exprContext):
-        sign_expr = ctx.sign_expr()
-        if sign_expr is not None:
-            return UnaryOp('-', self.visit(sign_expr))
-        return self.visit(ctx.index_expr())
+    def visitIndex_expr(self, ctx:BKOOLParser.Index_exprContext):
+        index_expr = ctx.index_expr()
+        if index_expr is not None:
+            expr = ctx.expr()
+            if len(expr) > 0:
+                return FieldAccess(self.visit(index_expr), self.visit(expr[0]))
 
-    # Visit a parse tree produced by BKOOLParser#member_access_in.
-    def visitMember_access_in(self, ctx: BKOOLParser.Member_access_inContext):
-        return self.visitChildren(ctx)
+            LP = ctx.LP()
+            if LP is not None:
+                expr_list = ctx.expr_list()
+                expr = expr_list.expr() if expr_list is not None else []
+                return CallExpr(
+                    self.visit(index_expr),
+                    self.visit(ctx.class_expr()),
+                    [self.visit(x) for x in expr]
+                )
+            return FieldAccess(self.visit(index_expr), self.visit(ctx.class_expr()))
+
+        return self.visit(ctx.class_expr())
 
     # Visit a parse tree produced by BKOOLParser#class_expr.
     def visitClass_expr(self, ctx: BKOOLParser.Class_exprContext):
+        # class_expr = ctx.class_expr()
+        # if class_expr is not None:
+        #     return NewExpr()
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#piority_exp.
     def visitPiority_exp(self, ctx: BKOOLParser.Piority_expContext):
-        return self.visitChildren(ctx)
+        expr = ctx.expr()
+        if expr is not None:
+            return self.visit(expr)
+
+        return self.visit(ctx.array_exp())
 
     # Visit a parse tree produced by BKOOLParser#array_exp.
     def visitArray_exp(self, ctx: BKOOLParser.Array_expContext):
+        operands = ctx.operands()
+        if len(operands) > 1:
+            return ArrayLiteral([self.visit(x) for x in operands])
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#operands.
     def visitOperands(self, ctx: BKOOLParser.OperandsContext):
-        return self.visitChildren(ctx)
+        if ctx.INTLIT() is not None:
+            return IntLiteral(int(ctx.getText()))
+
+        if ctx.FLOATLIT() is not None:
+            return FloatLiteral(ctx.getText())
+
+        if ctx.BOOLEANLIT() is not None:
+            return BooleanLiteral(ctx.getText())
+
+        if ctx.STRINGLIT() is not None:
+            return StringLiteral(ctx.getText())
+
+        arrayLIT = ctx.arrayLIT()
+        if arrayLIT is not None:
+            elements = arrayLIT.element_list().elements()
+            return [self.visit(x) for x in elements]
+
+        if ctx.multi_ArrayLIT() is not None:
+            return self.visitChildren(ctx.array_list())
+
+        if ctx.ID() is not None:
+            return Id(ctx.getText())
+
+        if ctx.Self_word() is not None:
+            return SelfLiteral()
+
+        if ctx.class_name() is not None:
+            return Id(ctx.getText())
+
+        if ctx.THIS() is not None:
+            return SelfLiteral()
 
     # Visit a parse tree produced by BKOOLParser#idlist.
     def visitIdlist(self, ctx: BKOOLParser.IdlistContext):

@@ -74,7 +74,7 @@ Do_word: DO;
 Down_to_word: DOWNTO;
 
 //Instance/static (member_access_in/member_access_out) method invocation
-invocation_stmt: (index_expr|ID LP (expr|invocation_stmt) RP) SEMI?;
+invocation_stmt: ID LP (expr|invocation_stmt)? RP SEMI?;
 
 //Look at the names => rules
 break_stmt: Break_word SEMI;
@@ -172,10 +172,10 @@ sign_expr: Sub sign_expr
 | index_expr;
 
 index_expr: index_expr
-        (
-            (LSB expr RSB)+|
-            Member_access_in_ope class_expr (LP expr_list? RP)?
-        )
+            (
+                (LSB expr RSB)+|
+                Member_access_in_ope class_expr (LP expr_list? RP)?
+            )
 | class_expr;
 
 //member_access_in: member_access_in Member_access_in_ope class_expr (LP expr_list? RP)?
