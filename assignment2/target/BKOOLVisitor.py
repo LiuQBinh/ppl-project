@@ -104,6 +104,16 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BKOOLParser#elseif_stmt.
+    def visitElseif_stmt(self, ctx:BKOOLParser.Elseif_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BKOOLParser#else_stmt.
+    def visitElse_stmt(self, ctx:BKOOLParser.Else_stmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BKOOLParser#loop_for_stmt.
     def visitLoop_for_stmt(self, ctx:BKOOLParser.Loop_for_stmtContext):
         return self.visitChildren(ctx)
