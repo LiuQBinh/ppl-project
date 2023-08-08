@@ -59,14 +59,16 @@ new_val_from_class_stmt: Keyword_new class_name LP expr_list? RP;
 Keyword_new: KEYWORD_NEW;
 
 //If stmt
-if_stmt: (If_word expr Then_word block_stmt) (Elseif_word  expr block_stmt)* (Else_word block_stmt)?;
+if_stmt: (If_word expr Then_word block_stmt) elseif_stmt;
+elseif_stmt: (Elseif_word  expr block_stmt)* else_stmt?;
+else_stmt: (Else_word block_stmt);
 If_word: IF;
 Then_word: THEN;
 Else_word: ELSE;
 Elseif_word: ELSEIF;
 
 //Loop (For) stmt
-loop_for_stmt: For_word (ID Colon Assign_op INTLIT) (To_word|Down_to_word) (INTLIT) Do_word block_stmt;
+loop_for_stmt: For_word (ID Colon Assign_op expr) (To_word|Down_to_word) (expr) Do_word block_stmt;
 For_word: FOR;
 Assign_op: ASSIGN_OP;
 To_word: TO;
@@ -74,7 +76,8 @@ Do_word: DO;
 Down_to_word: DOWNTO;
 
 //Instance/static (member_access_in/member_access_out) method invocation
-invocation_stmt: ID LP (expr|invocation_stmt)? RP SEMI?;
+invocation_stmt: ID LP (invocation_stmt_params (COMA invocation_stmt_params)*)? RP SEMI?;
+invocation_stmt_params: expr|invocation_stmt;
 
 //Look at the names => rules
 break_stmt: Break_word SEMI;

@@ -1,5 +1,7 @@
 class Shape {
             static float getArea() {
-                sqrt(this.length + this.width);
+                for i:= a + b to 12121 do {
+                    return sqrt(this.length + this.width, 2);
+                }
             }
         }

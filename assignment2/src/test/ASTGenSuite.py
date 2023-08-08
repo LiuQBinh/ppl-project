@@ -32,7 +32,9 @@ class ASTGenSuite(unittest.TestCase):
         """More complex program"""
         input = """class Shape {
             static float getArea() {
-                sqrt(this.length + this.width);
+                for i:= (a + b) to (c + d) do {
+                    return sqrt(this.length + this.width, 2);
+                }
             }
         }"""
         expect = str(Program([ClassDecl(Id("main"),

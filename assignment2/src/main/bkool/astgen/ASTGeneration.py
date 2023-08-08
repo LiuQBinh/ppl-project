@@ -216,26 +216,35 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#loop_for_stmt.
     def visitLoop_for_stmt(self, ctx: BKOOLParser.Loop_for_stmtContext):
-        return self.visitChildren(ctx)
+        expr = ctx.expr()
+        return For(
+            Id(ctx.ID().getText()),
+            self.visit(expr[0]),
+            self.visit(expr[1]),
+            ctx.To_word() is not None,
+            self.visit(ctx.block_stmt()),
+        )
 
     # Visit a parse tree produced by BKOOLParser#invocation_stmt.
     def visitInvocation_stmt(self, ctx: BKOOLParser.Invocation_stmtContext):
         ID = ctx.ID()
+
+        return CallExpr(
+            Id(ID.getText()),
+            NullLiteral(),
+            [(self.visit(x)) for x in ctx.invocation_stmt_params()]
+        )
+
+    # Visit a parse tree produced by BKOOLParser#invocation_stmt_params.
+    def visitInvocation_stmt_params(self, ctx:BKOOLParser.Invocation_stmt_paramsContext):
         expr = ctx.expr()
-        invocation_stmt = ctx.invocation_stmt()
-
-        param = None
         if expr is not None:
-            param = self.visit(expr)
-        if invocation_stmt is not None:
-            param = self.visit(invocation_stmt)
-
-
-        return CallExpr(Id(ID.getText()), NullLiteral(), param)
+            return self.visit(expr)
+        return self.visit(ctx.invocation_stmt())
 
     # Visit a parse tree produced by BKOOLParser#break_stmt.
     def visitBreak_stmt(self, ctx: BKOOLParser.Break_stmtContext):
-        return self.visitChildren(ctx)
+        return Break()
 
     # Visit a parse tree produced by BKOOLParser#return_stmt.
     def visitReturn_stmt(self, ctx: BKOOLParser.Return_stmtContext):

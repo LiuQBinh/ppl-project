@@ -114,6 +114,11 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BKOOLParser#invocation_stmt_params.
+    def visitInvocation_stmt_params(self, ctx:BKOOLParser.Invocation_stmt_paramsContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BKOOLParser#break_stmt.
     def visitBreak_stmt(self, ctx:BKOOLParser.Break_stmtContext):
         return self.visitChildren(ctx)
