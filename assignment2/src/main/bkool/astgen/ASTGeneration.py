@@ -71,6 +71,7 @@ class ASTGeneration(BKOOLVisitor):
     def visitInstructor(self, ctx: BKOOLParser.InstructorContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by BKOOLParser#methods.
     def visitMethods(self, ctx: BKOOLParser.MethodsContext):
         return MethodDecl(
@@ -212,7 +213,29 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#if_stmt.
     def visitIf_stmt(self, ctx: BKOOLParser.If_stmtContext):
-        return self.visitChildren(ctx)
+        return If(
+            self.visit(ctx.expr()),
+            self.visit(ctx.block_stmt()),
+            self.visit(ctx.elseif_stmt()),
+        )
+
+    # Visit a parse tree produced by BKOOLParser#elseif_stmt.
+    def visitElseif_stmt(self, ctx:BKOOLParser.Elseif_stmtContext):
+        expr = ctx.expr()
+        if len(expr) == 0:
+            return self.visit(ctx.else_stmt())
+
+        return If(
+            [(self.visit(x)) for x in ctx.expr()],
+            [(self.visit(x)) for x in ctx.block_stmt()],
+            self.visit(ctx.else_stmt()),
+        )
+
+
+    # Visit a parse tree produced by BKOOLParser#else_stmt.
+    def visitElse_stmt(self, ctx:BKOOLParser.Else_stmtContext):
+        return self.visit(ctx.block_stmt())
+
 
     # Visit a parse tree produced by BKOOLParser#loop_for_stmt.
     def visitLoop_for_stmt(self, ctx: BKOOLParser.Loop_for_stmtContext):

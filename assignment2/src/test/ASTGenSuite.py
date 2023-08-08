@@ -32,7 +32,10 @@ class ASTGenSuite(unittest.TestCase):
         """More complex program"""
         input = """class Shape {
             static float getArea() {
-                for i:= (a + b) to (c + d) do {
+                if(i > 2) then {
+                    return sqrt(this.length + this.width, 2);
+                }
+                else {
                     return sqrt(this.length + this.width, 2);
                 }
             }
