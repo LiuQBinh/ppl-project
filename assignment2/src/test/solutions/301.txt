@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(test),[AttributeDecl(Instance,VarDecl(Id(a,b),ClassType(Shape)))])])
+Program([ClassDecl(Id(Shape),[AttributeDecl(Static,[ConstDecl(constant=Id(name='numOfShape'), constType='IntType', value=IntLiteral(value=0))])])])

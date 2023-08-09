@@ -1,3 +1,5 @@
-class test {
-            Shape a, b;
-        }
+
+            class Shape {
+                static int numOfShape = 0;
+            }
+        

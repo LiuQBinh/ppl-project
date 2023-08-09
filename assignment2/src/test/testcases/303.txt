@@ -1,0 +1,10 @@
+class Shape {
+            static float getArea() {
+                if(i > 2) then {
+                    return sqrt(this.length + this.width, 2);
+                }
+                else {
+                    return sqrt(this.length + this.width, 2);
+                }
+            }
+        }

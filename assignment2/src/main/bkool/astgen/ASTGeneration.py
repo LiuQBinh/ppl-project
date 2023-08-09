@@ -95,22 +95,35 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#attributes.
     def visitAttributes(self, ctx: BKOOLParser.AttributesContext):
-        init_value = ctx.operands().getText() if ctx.operands() is not None else 'None'
-        return AttributeDecl(
-            Instance(),
-            VarDecl(
-                Id(ctx.idlist().getText()),
-                self.visit(ctx.types()),
-                init_value
-            )
-        )
+        class_props_kind = ctx.class_props_kind()
+        expr = ctx.expr()
+
+        if class_props_kind.Static_word() is not None:
+            decl = [
+                ConstDecl(
+                    Id(idObj.getText()),
+                    self.visit(ctx.types()),
+                    self.visit(expr) if expr is not None else None,
+                ) for idObj in ctx.idlist().ID()
+            ]
+            kind = Static()
+        else:
+            decl = [
+                VarDecl(
+                    Id(idObj.getText()),
+                    self.visit(ctx.types()),
+                    expr if expr is not None else None,
+                ) for idObj in ctx.idlist().ID()
+            ]
+            kind = Instance()
+
+        return AttributeDecl(kind,decl)
 
     # Visit a parse tree produced by BKOOLParser#class_props_kind.
     def visitClass_props_kind(self, ctx: BKOOLParser.Class_props_kindContext):
-        static = 'static' if Static() is not None else ''
-        final = 'final' if ctx.Final_word() is not None else ''
-        kind = final + static
-        return 'normal' if kind == '' else kind
+        if ctx.Static_word() is not None:
+            return Static()
+        return str(Instance())
 
     # Visit a parse tree produced by BKOOLParser#block_stmt.
     def visitBlock_stmt(self, ctx: BKOOLParser.Block_stmtContext):
@@ -291,13 +304,13 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#primitive_Type.
     def visitPrimitive_Type(self, ctx: BKOOLParser.Primitive_TypeContext):
         if ctx.Float_word() is not None:
-            return FloatType()
+            return str(FloatType())
         if ctx.Bool_word() is not None:
-            return BoolType()
+            return str(BoolType())
         if ctx.Str_word() is not None:
-            return StringType()
+            return str(StringType())
         if ctx.Int_word() is not None:
-            return IntType()
+            return str(IntType())
 
     # Visit a parse tree produced by BKOOLParser#array_Type.
     def visitArray_Type(self, ctx: BKOOLParser.Array_TypeContext):
