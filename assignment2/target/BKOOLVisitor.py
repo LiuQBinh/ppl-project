@@ -49,13 +49,23 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BKOOLParser#class_props_kind.
+    def visitClass_props_kind(self, ctx:BKOOLParser.Class_props_kindContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BKOOLParser#attributes.
     def visitAttributes(self, ctx:BKOOLParser.AttributesContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by BKOOLParser#class_props_kind.
-    def visitClass_props_kind(self, ctx:BKOOLParser.Class_props_kindContext):
+    # Visit a parse tree produced by BKOOLParser#attribute_as.
+    def visitAttribute_as(self, ctx:BKOOLParser.Attribute_asContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by BKOOLParser#attribute_as_val.
+    def visitAttribute_as_val(self, ctx:BKOOLParser.Attribute_as_valContext):
         return self.visitChildren(ctx)
 
 

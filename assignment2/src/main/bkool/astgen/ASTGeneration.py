@@ -10,6 +10,7 @@ class InitValue(Type):
     def __str__(self):
         return "InitValue"
 
+
 @dataclass
 class IndexExpr():
     data: str
@@ -20,13 +21,13 @@ class IndexExpr():
         b = self.props
         return "IndexExpr(" + str(self.data) + "," + str(self.props) + ")"
 
-
     def __str__(self):
         a = self.data
-        b =self.props
+        b = self.props
         if isinstance(b, CallExpr):
             return "IndexExpr(" + str(self.data) + ',' + b.data.data.__str__() + ")"
         return "IndexExpr(" + self.data + ',' + self.props + ")"
+
 
 class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#program.
@@ -70,7 +71,6 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#instructor.
     def visitInstructor(self, ctx: BKOOLParser.InstructorContext):
         return self.visitChildren(ctx)
-
 
     # Visit a parse tree produced by BKOOLParser#methods.
     def visitMethods(self, ctx: BKOOLParser.MethodsContext):
@@ -117,13 +117,21 @@ class ASTGeneration(BKOOLVisitor):
             ]
             kind = Instance()
 
-        return AttributeDecl(kind,decl)
+        return AttributeDecl(kind, decl)
 
     # Visit a parse tree produced by BKOOLParser#class_props_kind.
     def visitClass_props_kind(self, ctx: BKOOLParser.Class_props_kindContext):
         if ctx.Static_word() is not None:
             return Static()
         return str(Instance())
+
+    # Visit a parse tree produced by BKOOLParser#attribute_as.
+    def visitAttribute_as(self, ctx: BKOOLParser.Attribute_asContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by BKOOLParser#attribute_as_val.
+    def visitAttribute_as_val(self, ctx: BKOOLParser.Attribute_as_valContext):
+        return self.visitChildren(ctx)
 
     # Visit a parse tree produced by BKOOLParser#block_stmt.
     def visitBlock_stmt(self, ctx: BKOOLParser.Block_stmtContext):
@@ -233,7 +241,7 @@ class ASTGeneration(BKOOLVisitor):
         )
 
     # Visit a parse tree produced by BKOOLParser#elseif_stmt.
-    def visitElseif_stmt(self, ctx:BKOOLParser.Elseif_stmtContext):
+    def visitElseif_stmt(self, ctx: BKOOLParser.Elseif_stmtContext):
         expr = ctx.expr()
         else_stmt = ctx.else_stmt()
         if len(expr) == 0:
@@ -245,11 +253,9 @@ class ASTGeneration(BKOOLVisitor):
             self.visit(ctx.else_stmt()) if (else_stmt is not None) else None,
         )
 
-
     # Visit a parse tree produced by BKOOLParser#else_stmt.
-    def visitElse_stmt(self, ctx:BKOOLParser.Else_stmtContext):
+    def visitElse_stmt(self, ctx: BKOOLParser.Else_stmtContext):
         return self.visit(ctx.block_stmt())
-
 
     # Visit a parse tree produced by BKOOLParser#loop_for_stmt.
     def visitLoop_for_stmt(self, ctx: BKOOLParser.Loop_for_stmtContext):
@@ -273,7 +279,7 @@ class ASTGeneration(BKOOLVisitor):
         )
 
     # Visit a parse tree produced by BKOOLParser#invocation_stmt_params.
-    def visitInvocation_stmt_params(self, ctx:BKOOLParser.Invocation_stmt_paramsContext):
+    def visitInvocation_stmt_params(self, ctx: BKOOLParser.Invocation_stmt_paramsContext):
         expr = ctx.expr()
         if expr is not None:
             return self.visit(expr)
@@ -439,7 +445,7 @@ class ASTGeneration(BKOOLVisitor):
         return self.visit(ctx.index_expr())
 
     # Visit a parse tree produced by BKOOLParser#index_expr.
-    def visitIndex_expr(self, ctx:BKOOLParser.Index_exprContext):
+    def visitIndex_expr(self, ctx: BKOOLParser.Index_exprContext):
         index_expr = ctx.index_expr()
         if index_expr is not None:
             expr = ctx.expr()
