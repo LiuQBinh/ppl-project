@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[AttributeDecl(Static,[ConstDecl(constant=Id(name='length'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121))), ConstDecl(constant=Id(name='width'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121)))])])])

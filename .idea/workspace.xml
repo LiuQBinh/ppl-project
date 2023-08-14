@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" afterDir="false" />
-    </list>
+    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +133,7 @@
       <workItem from="1691585593717" duration="12250000" />
       <workItem from="1691681690619" duration="5041000" />
       <workItem from="1691813057103" duration="1190000" />
-      <workItem from="1692032105766" duration="1924000" />
+      <workItem from="1692032105766" duration="2392000" />
     </task>
     <task id="LOCAL-00001" summary="add ass 1">
       <created>1687532415649</created>
@@ -464,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691600411206</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1692036357230</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1692036357230</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
