@@ -287,44 +287,141 @@ class ASTGenSuite(unittest.TestCase):
     #     ]))
     #     self.assertTrue(TestAST.test(input, expect, 309))
 
-    def test_class_decl_method_with_loop_downto(self):
+    # def test_class_decl_method_with_loop_downto(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float getArea() {
+    #               for i:=2232 downto 12121 do {
+    #                   a := 1;
+    #               }
+    #             }
+    #         }
+    #     """
+    #     expect = str(Program([
+    #         ClassDecl(
+    #             Id('Shape'),
+    #             [
+    #                 MethodDecl(
+    #                     Static(),
+    #                     Id('getArea'),
+    #                     [],
+    #                     FloatType(),
+    #                     Block(
+    #                         [],
+    #                         [
+    #                             For(
+    #                                 Id('i'),
+    #                                 IntLiteral(2232),
+    #                                 IntLiteral(12121),
+    #                                 False,
+    #                                 Block(
+    #                                     [],
+    #                                     [
+    #                                         Assign(Id('a'),IntLiteral(1))
+    #                                     ]
+    #                                 )
+    #                             )
+    #                         ]
+    #                     )
+    #                 )]
+    #         )
+    #     ]))
+    #     self.assertTrue(TestAST.test(input, expect, 310))
+
+    # def test_class_decl_method_with_loop_downto_if_inside(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float getArea() {
+    #               for i:=2232 downto 12121 do {
+    #                   a := 1;
+    #                   if a > 2 then {
+    #                       a := 111;
+    #                   }
+    #               }
+    #             }
+    #         }
+    #     """
+    #     expect = str(Program(
+    #         [
+    #             ClassDecl(
+    #                 Id('Shape'),
+    #                 [
+    #                     MethodDecl(
+    #                         Static(),
+    #                         Id('getArea'),
+    #                         [],
+    #                         FloatType(),
+    #                         Block(
+    #                             [],
+    #                             [
+    #                                 For(
+    #                                     Id('i'),
+    #                                     IntLiteral(2232),
+    #                                     IntLiteral(12121),
+    #                                     False,
+    #                                     Block(
+    #                                         [],
+    #                                         [
+    #                                             Assign(Id('a'),IntLiteral(1)),
+    #                                             If(
+    #                                                 BinaryOp('>',Id('a'),IntLiteral(2)),
+    #                                                 Block([],[Assign(Id('a'),IntLiteral(111))])
+    #                                             )
+    #                                         ]
+    #                                     )
+    #                                 )
+    #                             ]
+    #                         )
+    #                     )
+    #                 ]
+    #             )
+    #         ]
+    #     ))
+    #     self.assertTrue(TestAST.test(input, expect, 311))
+
+    def test_class_decl_method_with_loop_downto_if_inside(self):
         """Simple program: class main {} """
         input = """
             class Shape {
-                static float getArea() {
-                  for i:=2232 downto 12121 do {
-                      a := 1;
-                  }
-                }
+                static float length, width = pi[121];
             }
         """
-        expect = str(Program([
-            ClassDecl(
-                Id('Shape'),
-                [
-                    MethodDecl(
-                        Static(),
-                        Id('getArea'),
-                        [],
-                        FloatType(),
-                        Block(
+        expect = str(Program(
+            [
+                ClassDecl(
+                    Id('Shape'),
+                    [
+                        MethodDecl(
+                            Static(),
+                            Id('getArea'),
                             [],
-                            [
-                                For(
-                                    Id('i'),
-                                    IntLiteral(2232),
-                                    IntLiteral(12121),
-                                    False,
-                                    Block(
-                                        [],
-                                        [
-                                            Assign(Id('a'),IntLiteral(1))
-                                        ]
+                            FloatType(),
+                            Block(
+                                [],
+                                [
+                                    For(
+                                        Id('i'),
+                                        IntLiteral(2232),
+                                        IntLiteral(12121),
+                                        False,
+                                        Block(
+                                            [],
+                                            [
+                                                Assign(Id('a'),IntLiteral(1)),
+                                                If(
+                                                    BinaryOp('>',Id('a'),IntLiteral(2)),
+                                                    Block([],[Assign(Id('a'),IntLiteral(111))])
+                                                )
+                                            ]
+                                        )
                                     )
-                                )
-                            ]
+                                ]
+                            )
                         )
-                    )]
-            )
-        ]))
-        self.assertTrue(TestAST.test(input, expect, 310))
+                    ]
+                )
+            ]
+        ))
+        self.assertTrue(TestAST.test(input, expect, 312))

@@ -101,19 +101,19 @@ class ASTGeneration(BKOOLVisitor):
         if class_props_kind.Static_word() is not None:
             decl = [
                 ConstDecl(
-                    Id(idObj.getText()),
+                    Id(attribute_as.ID.getText()),
                     self.visit(ctx.types()),
-                    self.visit(expr) if expr is not None else None,
-                ) for idObj in ctx.idlist().ID()
+                    self.visit(attribute_as.attribute_as_val) if attribute_as.attribute_as_val() is not None else None,
+                ) for attribute_as in ctx.attribute_as()
             ]
             kind = Static()
         else:
             decl = [
                 VarDecl(
-                    Id(idObj.getText()),
+                    Id(attribute_as.ID.getText()),
                     self.visit(ctx.types()),
                     expr if expr is not None else None,
-                ) for idObj in ctx.idlist().ID()
+                ) for attribute_as in ctx.attribute_as()
             ]
             kind = Instance()
 
@@ -235,13 +235,14 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#elseif_stmt.
     def visitElseif_stmt(self, ctx:BKOOLParser.Elseif_stmtContext):
         expr = ctx.expr()
+        else_stmt = ctx.else_stmt()
         if len(expr) == 0:
-            return self.visit(ctx.else_stmt())
+            return self.visit(ctx.else_stmt()) if (else_stmt is not None) else None
 
         return If(
             [(self.visit(x)) for x in ctx.expr()],
             [(self.visit(x)) for x in ctx.block_stmt()],
-            self.visit(ctx.else_stmt()),
+            self.visit(ctx.else_stmt()) if (else_stmt is not None) else None,
         )
 
 

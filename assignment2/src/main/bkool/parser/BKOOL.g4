@@ -34,8 +34,10 @@ methods: class_props_kind methods_return_types methods_name LP (paramlist)? RP b
 methods_name: (ID|Main_word);
 methods_return_types: types|Void_word;
 
-attributes: class_props_kind types idlist (Assign_op expr)? SEMI;
 class_props_kind: (Static_word)? (Final_word)?;
+attributes: class_props_kind types attribute_as (COMA attribute_as)* SEMI;
+attribute_as: ID ((Colon Assign_op)|Assign_op) attribute_as_val;
+attribute_as_val: expr|new_val_from_class_stmt|invocation_stmt;
 
 // class declaration _ end
 
