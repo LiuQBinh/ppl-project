@@ -381,47 +381,242 @@ class ASTGenSuite(unittest.TestCase):
     #     ))
     #     self.assertTrue(TestAST.test(input, expect, 311))
 
-    def test_class_decl_method_with_loop_downto_if_inside(self):
+    # def test_class_decl_attr(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float length, width = pi[121];
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(Id('Shape'),[['AttributeDecl(Static,ConstDecl(Id(length),FloatType,None))', 'AttributeDecl(Static,ConstDecl(Id(width),FloatType,FieldAccess(Id(pi),IntLit(121))))']])]))
+    #     self.assertTrue(TestAST.test(input, expect, 312))
+    #
+    # def test_class_decl_attr2(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float length = 222, width = pi[121];
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(Id('Shape'),[[AttributeDecl('Static',str(ConstDecl(Id('length'),FloatType(),IntLiteral(222)))), AttributeDecl('Static',str(ConstDecl(Id('width'),FloatType(),FieldAccess(Id('pi'),IntLiteral(121)))))]])]))
+    #     self.assertTrue(TestAST.test(input, expect, 313))
+
+    # def test_class_decl_attr3(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float length = 222, width = pi[121];
+    #             static float length = 222, width = pi[121];
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(Id('Shape'),[
+    #             [AttributeDecl('Static',str(ConstDecl(Id('length'),FloatType(),IntLiteral(222)))), AttributeDecl('Static',str(ConstDecl(Id('width'),FloatType(),FieldAccess(Id('pi'),IntLiteral(121)))))],
+    #             [AttributeDecl('Static',str(ConstDecl(Id('length'),FloatType(),IntLiteral(222)))), AttributeDecl('Static',str(ConstDecl(Id('width'),FloatType(),FieldAccess(Id('pi'),IntLiteral(121)))))],
+    #         ])]))
+    #     self.assertTrue(TestAST.test(input, expect, 314))
+
+    # def test_class_decl_attr3(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static float length = 222, width = pi[121];
+    #             static float length2 = 3;
+    #             static float length3 = 4;
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(Id('Shape'),[
+    #             [AttributeDecl('Static',str(ConstDecl(Id('length'),FloatType(),IntLiteral(222)))), AttributeDecl('Static',str(ConstDecl(Id('width'),FloatType(),FieldAccess(Id('pi'),IntLiteral(121)))))],
+    #             [AttributeDecl('Static',str(ConstDecl(Id('length2'),FloatType(),IntLiteral(3))))],
+    #             [AttributeDecl('Static',str(ConstDecl(Id('length3'),FloatType(),IntLiteral(4))))],
+    #         ])]))
+    #     self.assertTrue(TestAST.test(input, expect, 315))
+
+    # def test_assign_variable_3(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static final int numOfShape = 0;
+    #             static final int numOfShape2 = 0;
+    #             static float getArea() {
+    #               a:= c / d / e / f;
+    #             }
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(
+    #             Id('Shape'),
+    #             [
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape),IntType,IntLit(0))')],
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape2),IntType,IntLit(0))')],
+    #                 MethodDecl(
+    #                     Static(),
+    #                     Id('getArea'),
+    #                     [],
+    #                     FloatType(),
+    #                     Block(
+    #                         [],
+    #                         [
+    #                             Assign(
+    #                                 Id('a'),
+    #                                 BinaryOp(
+    #                                     '/',
+    #                                     BinaryOp(
+    #                                         '/',
+    #                                         BinaryOp('/', Id('c'), Id('d')),
+    #                                         Id('e')
+    #                                     ),
+    #                                     Id('f')
+    #                                 )
+    #                             )
+    #                         ]
+    #                     )
+    #                 )])])
+    #
+    #     )
+    #     self.assertTrue(TestAST.test(input, expect, 316))
+
+    # def test_assign_variable_2(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static final int numOfShape = 0;
+    #             static final int numOfShape2 = 0;
+    #             static float getArea() {
+    #               a:= c + d + e + f;
+    #             }
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(
+    #             Id('Shape'),
+    #             [
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape),IntType,IntLit(0))')],
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape2),IntType,IntLit(0))')],
+    #                 MethodDecl(
+    #                     Static(),
+    #                     Id('getArea'),
+    #                     [],
+    #                     FloatType(),
+    #                     Block(
+    #                         [],
+    #                         [
+    #                             Assign(
+    #                                 Id('a'),
+    #                                 BinaryOp(
+    #                                     '+',
+    #                                     BinaryOp(
+    #                                         '+',
+    #                                         BinaryOp('+', Id('c'), Id('d')),
+    #                                         Id('e')
+    #                                     ),
+    #                                     Id('f')
+    #                                 )
+    #                             )
+    #                         ]
+    #                     )
+    #                 )])])
+    #
+    #     )
+    #     self.assertTrue(TestAST.test(input, expect, 317))
+
+    # def test_assign_variable_1(self):
+    #     """Simple program: class main {} """
+    #     input = """
+    #         class Shape {
+    #             static final int numOfShape = 0;
+    #             static final int numOfShape2 = 0;
+    #             static float getArea() {
+    #               a:= c * d * e * f;
+    #             }
+    #         }
+    #     """
+    #     expect = str(
+    #         Program([ClassDecl(
+    #             Id('Shape'),
+    #             [
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape),IntType,IntLit(0))')],
+    #                 [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape2),IntType,IntLit(0))')],
+    #                 MethodDecl(
+    #                     Static(),
+    #                     Id('getArea'),
+    #                     [],
+    #                     FloatType(),
+    #                     Block(
+    #                         [],
+    #                         [
+    #                             Assign(
+    #                                 Id('a'),
+    #                                 BinaryOp(
+    #                                     '*',
+    #                                     BinaryOp(
+    #                                         '*',
+    #                                         BinaryOp('*', Id('c'), Id('d')),
+    #                                         Id('e')
+    #                                     ),
+    #                                     Id('f')
+    #                                 )
+    #                             )
+    #                         ]
+    #                     )
+    #                 )])])
+    #
+    #     )
+    #     self.assertTrue(TestAST.test(input, expect, 318))
+
+    def test_for_and_return_and_if_elseif_else_block_list(self):
         """Simple program: class main {} """
         input = """
             class Shape {
-                static float length, width = pi[121];
+                static final int numOfShape = 0;
+                static final int numOfShape2 = 0;
+                static float getArea() {
+                      for i:=2232 downto 12121 do {
+                          if a > 2 then {
+                              a := 111;
+                          } elseif a < -1 {
+                              a := 000;
+                          } else {
+                              a := 222;
+                          }
+                          id.write(aa);
+                          return;
+                      }
+                }
             }
         """
-        expect = str(Program(
-            [
-                ClassDecl(
-                    Id('Shape'),
-                    [
-                        MethodDecl(
-                            Static(),
-                            Id('getArea'),
+        expect = str(
+            Program([ClassDecl(
+                Id('Shape'),
+                [
+                    [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape),IntType,IntLit(0))')],
+                    [AttributeDecl(kind='Static', decl='ConstDecl(Id(numOfShape2),IntType,IntLit(0))')],
+                    MethodDecl(
+                        Static(),
+                        Id('getArea'),
+                        [],
+                        FloatType(),
+                        Block(
                             [],
-                            FloatType(),
-                            Block(
-                                [],
-                                [
-                                    For(
-                                        Id('i'),
-                                        IntLiteral(2232),
-                                        IntLiteral(12121),
-                                        False,
-                                        Block(
-                                            [],
-                                            [
-                                                Assign(Id('a'),IntLiteral(1)),
-                                                If(
-                                                    BinaryOp('>',Id('a'),IntLiteral(2)),
-                                                    Block([],[Assign(Id('a'),IntLiteral(111))])
-                                                )
-                                            ]
-                                        )
+                            [
+                                Assign(
+                                    Id('a'),
+                                    BinaryOp(
+                                        '*',
+                                        BinaryOp(
+                                            '*',
+                                            BinaryOp('*', Id('c'), Id('d')),
+                                            Id('e')
+                                        ),
+                                        Id('f')
                                     )
-                                ]
-                            )
+                                )
+                            ]
                         )
-                    ]
-                )
-            ]
-        ))
-        self.assertTrue(TestAST.test(input, expect, 312))
+                    )])])
+
+        )
+        self.assertTrue(TestAST.test(input, expect, 318))

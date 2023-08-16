@@ -96,28 +96,27 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#attributes.
     def visitAttributes(self, ctx: BKOOLParser.AttributesContext):
         class_props_kind = ctx.class_props_kind()
-        expr = ctx.expr()
 
         if class_props_kind.Static_word() is not None:
             decl = [
-                ConstDecl(
-                    Id(attribute_as.ID.getText()),
+                str(ConstDecl(
+                    str(Id(attribute_as.ID().getText())),
                     self.visit(ctx.types()),
-                    self.visit(attribute_as.attribute_as_val) if attribute_as.attribute_as_val() is not None else None,
-                ) for attribute_as in ctx.attribute_as()
+                    self.visit(attribute_as.attribute_as_val()) if attribute_as.attribute_as_val() is not None else None,
+                )) for attribute_as in ctx.attribute_as()
             ]
             kind = Static()
         else:
-            decl = [
-                VarDecl(
-                    Id(attribute_as.ID.getText()),
+            decl = (
+                str(VarDecl(
+                    str(Id(attribute_as.ID().getText())),
                     self.visit(ctx.types()),
-                    expr if expr is not None else None,
-                ) for attribute_as in ctx.attribute_as()
-            ]
+                    self.visit(attribute_as.attribute_as_val()) if attribute_as.attribute_as_val() is not None else None,
+                )) for attribute_as in ctx.attribute_as()
+            )
             kind = Instance()
 
-        return AttributeDecl(kind, decl)
+        return [(AttributeDecl(str(kind), d)) for d in decl]
 
     # Visit a parse tree produced by BKOOLParser#class_props_kind.
     def visitClass_props_kind(self, ctx: BKOOLParser.Class_props_kindContext):

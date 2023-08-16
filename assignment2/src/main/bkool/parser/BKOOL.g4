@@ -36,7 +36,7 @@ methods_return_types: types|Void_word;
 
 class_props_kind: (Static_word)? (Final_word)?;
 attributes: class_props_kind types attribute_as (COMA attribute_as)* SEMI;
-attribute_as: ID ((Colon Assign_op)|Assign_op) attribute_as_val;
+attribute_as: ID ((Colon? Assign_op) attribute_as_val)?;
 attribute_as_val: expr|new_val_from_class_stmt|invocation_stmt;
 
 // class declaration _ end
@@ -78,7 +78,8 @@ Do_word: DO;
 Down_to_word: DOWNTO;
 
 //Instance/static (member_access_in/member_access_out) method invocation
-invocation_stmt: ID LP (invocation_stmt_params (COMA invocation_stmt_params)*)? RP SEMI?;
+invocation_stmt: ID (invocation_stmt_access)* LP (invocation_stmt_params (COMA invocation_stmt_params)*)? RP SEMI?;
+invocation_stmt_access: (Member_access_in_ope ID)|(LSB expr RSB);
 invocation_stmt_params: expr|invocation_stmt;
 
 //Look at the names => rules
