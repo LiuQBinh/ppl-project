@@ -37,7 +37,7 @@ methods_return_types: types|Void_word;
 class_props_kind: (Static_word)? (Final_word)?;
 attributes: class_props_kind types attribute_as (COMA attribute_as)* SEMI;
 attribute_as: ID ((Colon? Assign_op) attribute_as_val)?;
-attribute_as_val: expr|new_val_from_class_stmt|invocation_stmt;
+attribute_as_val: expr|new_val_from_class_stmt;
 
 // class declaration _ end
 
@@ -55,8 +55,9 @@ Final_word: FINAL;
 Void_word: VOID;
 
 //All type of stmts
-stmt: as_stmt | if_stmt | loop_for_stmt | break_stmt | return_stmt | invocation_stmt;
-as_stmt: index_expr (Colon Assign_op) (expr|new_val_from_class_stmt|invocation_stmt) SEMI; // Assignmet stmt
+stmt: as_stmt | if_stmt | loop_for_stmt | break_stmt | return_stmt | invoke_stmt;
+invoke_stmt: index_expr SEMI;
+as_stmt: index_expr (Colon Assign_op) (expr|new_val_from_class_stmt) SEMI; // Assignmet stmt
 new_val_from_class_stmt: Keyword_new class_name LP expr_list? RP;
 Keyword_new: KEYWORD_NEW;
 
@@ -77,17 +78,12 @@ To_word: TO;
 Do_word: DO;
 Down_to_word: DOWNTO;
 
-//Instance/static (member_access_in/member_access_out) method invocation
-invocation_stmt: ID (invocation_stmt_access)* LP (invocation_stmt_params (COMA invocation_stmt_params)*)? RP SEMI?;
-invocation_stmt_access: (Member_access_in_ope ID)|(LSB expr RSB);
-invocation_stmt_params: expr|invocation_stmt;
-
 //Look at the names => rules
 break_stmt: Break_word SEMI;
 Break_word: BREAK;
 
 // RETURN STMT
-return_stmt: Return_word (expr|invocation_stmt)? SEMI;
+return_stmt: Return_word (expr)? SEMI;
 Return_word: RETURN;
 //-------------------------------------------------------
 
@@ -148,8 +144,8 @@ attribute_name: ID;
 
 //Rules for variables/constants
 paramlist: param_decl (COMA param_decl)*;
-param_decl: (types idlist) (Colon Assign_op init_value)?;
-init_value: (expr|new_val_from_class_stmt|invocation_stmt);
+param_decl: (types idlist) (Colon? Assign_op init_value)?;
+init_value: (expr|new_val_from_class_stmt);
 
 //Rules for expressions, very complicated
 expr_list: expr (COMA expr)*;
