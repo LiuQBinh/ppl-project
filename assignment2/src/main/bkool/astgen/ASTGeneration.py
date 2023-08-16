@@ -201,9 +201,6 @@ class ASTGeneration(BKOOLVisitor):
         if ctx.return_stmt() is not None:
             return self.visitChildren(ctx)
 
-        if ctx.invocation_stmt() is not None:
-            return self.visitChildren(ctx)
-
         if ctx.getRuleIndex() is not None:
             return self.visitChildren(ctx)
 
@@ -222,9 +219,6 @@ class ASTGeneration(BKOOLVisitor):
         new_val_from_class_stmt = ctx.new_val_from_class_stmt()
         if new_val_from_class_stmt is not None:
             rightExpr = new_val_from_class_stmt
-        invocation_stmt = ctx.invocation_stmt()
-        if invocation_stmt is not None:
-            rightExpr = invocation_stmt
 
         return Assign(self.visit(ctx.index_expr()), self.visit(rightExpr))
 
@@ -271,23 +265,6 @@ class ASTGeneration(BKOOLVisitor):
             self.visit(ctx.block_stmt()),
         )
 
-    # Visit a parse tree produced by BKOOLParser#invocation_stmt.
-    def visitInvocation_stmt(self, ctx: BKOOLParser.Invocation_stmtContext):
-        ID = ctx.ID()
-
-        return CallExpr(
-            Id(ID.getText()),
-            NullLiteral(),
-            [(self.visit(x)) for x in ctx.invocation_stmt_params()]
-        )
-
-    # Visit a parse tree produced by BKOOLParser#invocation_stmt_params.
-    def visitInvocation_stmt_params(self, ctx: BKOOLParser.Invocation_stmt_paramsContext):
-        expr = ctx.expr()
-        if expr is not None:
-            return self.visit(expr)
-        return self.visit(ctx.invocation_stmt())
-
     # Visit a parse tree produced by BKOOLParser#break_stmt.
     def visitBreak_stmt(self, ctx: BKOOLParser.Break_stmtContext):
         return Break()
@@ -295,9 +272,7 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#return_stmt.
     def visitReturn_stmt(self, ctx: BKOOLParser.Return_stmtContext):
         expr = ctx.expr()
-        if expr is not None:
-            return Return(self.visit(expr))
-        return Return(self.visit(ctx.invocation_stmt()))
+        return Return(self.visit(expr))
 
     # Visit a parse tree produced by BKOOLParser#types.
     def visitTypes(self, ctx: BKOOLParser.TypesContext):
