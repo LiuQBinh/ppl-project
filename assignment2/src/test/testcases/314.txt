@@ -1,0 +1,6 @@
+
+            class Shape {
+                static float length = 222, width = pi[121];
+                static float length = 222, width = pi[121];
+            }
+        
