@@ -99,6 +99,11 @@ class BKOOLVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by BKOOLParser#invoke_stmt.
+    def visitInvoke_stmt(self, ctx:BKOOLParser.Invoke_stmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by BKOOLParser#as_stmt.
     def visitAs_stmt(self, ctx:BKOOLParser.As_stmtContext):
         return self.visitChildren(ctx)
@@ -126,16 +131,6 @@ class BKOOLVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by BKOOLParser#loop_for_stmt.
     def visitLoop_for_stmt(self, ctx:BKOOLParser.Loop_for_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BKOOLParser#invocation_stmt.
-    def visitInvocation_stmt(self, ctx:BKOOLParser.Invocation_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by BKOOLParser#invocation_stmt_params.
-    def visitInvocation_stmt_params(self, ctx:BKOOLParser.Invocation_stmt_paramsContext):
         return self.visitChildren(ctx)
 
 

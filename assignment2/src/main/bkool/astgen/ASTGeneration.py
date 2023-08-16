@@ -209,6 +209,10 @@ class ASTGeneration(BKOOLVisitor):
 
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by BKOOLParser#invoke_stmt.
+    def visitInvoke_stmt(self, ctx:BKOOLParser.Invoke_stmtContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by BKOOLParser#as_stmt.
     def visitAs_stmt(self, ctx: BKOOLParser.As_stmtContext):
         rightExpr = None
