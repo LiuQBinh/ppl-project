@@ -272,7 +272,7 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#return_stmt.
     def visitReturn_stmt(self, ctx: BKOOLParser.Return_stmtContext):
         expr = ctx.expr()
-        return Return(self.visit(expr))
+        return Return(self.visit(expr) if expr is not None else None)
 
     # Visit a parse tree produced by BKOOLParser#types.
     def visitTypes(self, ctx: BKOOLParser.TypesContext):
