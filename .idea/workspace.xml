@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/318.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/318.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +149,10 @@
       <workItem from="1692198918958" duration="316000" />
       <workItem from="1692199249382" duration="6495000" />
       <workItem from="1692295911029" duration="803000" />
+      <workItem from="1692624073549" duration="1366000" />
+      <workItem from="1692799304634" duration="2418000" />
+      <workItem from="1692898860673" duration="54000" />
+      <workItem from="1692898950707" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="add ass 1">
       <created>1687532415649</created>
@@ -508,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692206944208</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1692624203922</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1692624203922</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
