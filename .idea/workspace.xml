@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init">
+    <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass3, init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/TestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/TestUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/300.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/300.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/301.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/302.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/400.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/400.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/401.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/401.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/solutions/402.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/solutions/402.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/testcases/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/testcases/301.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/testcases/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/testcases/302.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/testcases/401.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/testcases/401.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/test/testcases/402.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/test/testcases/402.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +76,7 @@
       <recent name="C:\Users\luuqu\OneDrive\Documents\GitHub\ppl-project\assignment1\target" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luuqu\Documents\GitHub\ppl-project\assignment3\raw-ass3" />
       <recent name="C:\Users\luuqu\OneDrive\Documents\GitHub\ppl-project" />
       <recent name="C:\Users\luuqu\OneDrive\Documents\GitHub\ppl-project\assignment1\src\test" />
       <recent name="C:\Users\luuqu\OneDrive\Documents\GitHub\ppl-project\initial" />
@@ -79,13 +93,13 @@
       </envs>
       <option name="SDK_HOME" value="C:\Users\luuqu\AppData\Local\Programs\Python\Python311\python.exe" />
       <option name="SDK_NAME" value="Python 3.11" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignment2/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignment3/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment2/src/run.py" />
-      <option name="PARAMETERS" value="test ASTGenSuite" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment3/src/run.py" />
+      <option name="PARAMETERS" value="test CheckerSuite" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -152,7 +166,8 @@
       <workItem from="1692624073549" duration="1366000" />
       <workItem from="1692799304634" duration="2418000" />
       <workItem from="1692898860673" duration="54000" />
-      <workItem from="1692898950707" duration="348000" />
+      <workItem from="1692898950707" duration="1037000" />
+      <workItem from="1692972837782" duration="1264000" />
     </task>
     <task id="LOCAL-00001" summary="add ass 1">
       <created>1687532415649</created>
@@ -350,14 +365,6 @@
       <option name="project" value="LOCAL" />
       <updated>1689084619889</updated>
     </task>
-    <task id="LOCAL-00029" summary="ass2, init">
-      <option name="closed" value="true" />
-      <created>1689405822024</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1689405822024</updated>
-    </task>
     <task id="LOCAL-00030" summary="ass2, init">
       <option name="closed" value="true" />
       <created>1689613640777</created>
@@ -518,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692624203922</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="ass3, init">
+      <option name="closed" value="true" />
+      <created>1692899370593</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1692899370593</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +555,8 @@
     <MESSAGE value="ass1, save" />
     <MESSAGE value="ass1, done" />
     <MESSAGE value="ass2, init" />
-    <option name="LAST_COMMIT_MESSAGE" value="ass2, init" />
+    <MESSAGE value="ass3, init" />
+    <option name="LAST_COMMIT_MESSAGE" value="ass3, init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,14 +572,54 @@
           <option name="timeStamp" value="323" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>128</line>
-          <option name="timeStamp" value="324" />
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="326" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>121</line>
-          <option name="timeStamp" value="325" />
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="328" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="331" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>146</line>
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="334" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/assignment3/src/test/TestUtils.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="335" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -585,6 +641,6 @@
     <SUITE FILE_PATH="coverage/ppl_project$BKOOLLexer.coverage" NAME="BKOOLLexer Coverage Results" MODIFIED="1688839923648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment1/src/main/bkool/parser" />
     <SUITE FILE_PATH="coverage/ppl_project$TestUtils.coverage" NAME="TestUtils Coverage Results" MODIFIED="1689405686554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/test" />
     <SUITE FILE_PATH="coverage/ppl_project$ASTGeneration.coverage" NAME="ASTGeneration Coverage Results" MODIFIED="1689405743776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/main/bkool/astgen" />
-    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1692207780241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
+    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1692974090834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment3/src" />
   </component>
 </project>
