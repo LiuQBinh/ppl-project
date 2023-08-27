@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],FloatType,Block([[VarDecl(variable=Id(name='a'), varType='IntType', varInit=IntLiteral(value=2))]],[]))])])

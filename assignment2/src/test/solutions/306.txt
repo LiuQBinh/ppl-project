@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape'), constType='IntType', value=IntLiteral(value=0)))]])])

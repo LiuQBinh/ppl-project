@@ -1,0 +1,11 @@
+
+            class Shape {
+                static float getArea() {
+                    if a <= 2 then {
+                        return a != 2;
+                    } else {
+                        return a == 2;
+                    }
+                }
+            }
+        

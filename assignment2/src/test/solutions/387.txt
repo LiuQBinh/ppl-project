@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],BoolType,Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=BinaryOp(op='>', left=BinaryOp(op='+', left=CallExpr(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), method=Id(name='c'), param=[]), right=IntLiteral(value=2)), right=IntLiteral(value=2)))]],[]))])])

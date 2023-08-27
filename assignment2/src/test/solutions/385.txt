@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],BoolType,Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=CallExpr(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), method=Id(name='c'), param=[]))]],[]))])])

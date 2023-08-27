@@ -1,0 +1,7 @@
+
+            class Shape {
+                static boolean getArea() {
+                    boolean a = -((b < 2) && (b < 100) || a || c < 1) || false);
+                }
+            }
+        

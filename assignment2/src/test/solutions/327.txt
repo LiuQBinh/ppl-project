@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],FloatType,Block([],[Return(BinaryOp(>=,Id(a),IntLiteral(2)))]))])])

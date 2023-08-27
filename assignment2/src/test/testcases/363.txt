@@ -1,0 +1,7 @@
+
+            class Shape {
+                static float getArea() {
+                    int a = (b * 2 + 1) + (b + 3.14 + 2);
+                }
+            }
+        

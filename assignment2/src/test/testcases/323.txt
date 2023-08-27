@@ -1,0 +1,11 @@
+
+            class Shape {
+                static float getArea() {
+                    for i:=2232 downto 12121 do {
+                        if i > 1 then {
+                            return;
+                        }
+                    }
+                }
+            }
+        

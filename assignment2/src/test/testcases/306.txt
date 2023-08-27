@@ -1,0 +1,5 @@
+
+            class Shape {
+                static int numOfShape = 0;
+            }
+        

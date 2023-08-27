@@ -1,0 +1,7 @@
+
+            class Shape {
+                static float getArea() {
+                    int a = ((a % b % c) % d) % e % f;
+                }
+            }
+        

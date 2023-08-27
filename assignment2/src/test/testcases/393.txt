@@ -1,0 +1,7 @@
+
+            class Shape {
+                static boolean getArea() {
+                    // int a = 2e333333 * 1;
+                }
+            }
+        

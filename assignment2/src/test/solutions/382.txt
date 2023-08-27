@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],BoolType,Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=UnaryOp(op='-', body=BinaryOp(op='>', left=Id(name='b'), right=IntLiteral(value=2))))]],[]))])])
