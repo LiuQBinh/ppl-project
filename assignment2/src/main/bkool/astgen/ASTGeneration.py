@@ -435,12 +435,20 @@ class ASTGeneration(BKOOLVisitor):
                 expr = expr_list.expr() if expr_list is not None else []
                 return CallExpr(
                     self.visit(index_expr),
-                    self.visit(ctx.class_expr()),
+                    self.visit(ctx.invoke_expr()),
                     [self.visit(x) for x in expr]
                 )
-            return FieldAccess(self.visit(index_expr), self.visit(ctx.class_expr()))
+            return FieldAccess(self.visit(index_expr), self.visit(ctx.invoke_expr()))
 
-        return self.visit(ctx.class_expr())
+        return self.visit(ctx.invoke_expr())
+
+    # Visit a parse tree produced by BKOOLParser#invoke_expr.
+    def visitInvoke_expr(self, ctx:BKOOLParser.Invoke_exprContext):
+        expr_list = ctx.expr_list()
+        if expr_list is not None:
+            return CallExpr(Id(ctx.ID().getText()), None, [self.visit(x) for x in expr_list.expr() ])
+        return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by BKOOLParser#class_expr.
     def visitClass_expr(self, ctx: BKOOLParser.Class_exprContext):

@@ -8,43 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/utils/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/utils/AST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/TestUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/301.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/302.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/302.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/303.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/303.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/305.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/305.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/307.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/307.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/308.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/308.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/309.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/309.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/310.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/310.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/311.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/312.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/312.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/313.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/313.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/315.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/315.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/316.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/316.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/317.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/317.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/318.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/318.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/301.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/301.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/307.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/307.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/308.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/308.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/309.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/309.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/310.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/310.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/311.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/312.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/312.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/313.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/313.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/315.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/315.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/316.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/316.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/317.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/317.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/318.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/318.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/400.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/400.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/385.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/385.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/388.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/388.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/303.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/303.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -570,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692206944208</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1693132780802</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1693132780802</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,19 +587,9 @@
           <option name="timeStamp" value="324" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>381</line>
-          <option name="timeStamp" value="331" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>373</line>
-          <option name="timeStamp" value="335" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py</url>
-          <line>372</line>
-          <option name="timeStamp" value="336" />
+          <url>file://$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py</url>
+          <line>291</line>
+          <option name="timeStamp" value="348" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -642,6 +611,6 @@
     <SUITE FILE_PATH="coverage/ppl_project$BKOOLLexer.coverage" NAME="BKOOLLexer Coverage Results" MODIFIED="1688839923648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment1/src/main/bkool/parser" />
     <SUITE FILE_PATH="coverage/ppl_project$TestUtils.coverage" NAME="TestUtils Coverage Results" MODIFIED="1689405686554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/test" />
     <SUITE FILE_PATH="coverage/ppl_project$ASTGeneration.coverage" NAME="ASTGeneration Coverage Results" MODIFIED="1689405743776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/main/bkool/astgen" />
-    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1693132326900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
+    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1693136037527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
   </component>
 </project>

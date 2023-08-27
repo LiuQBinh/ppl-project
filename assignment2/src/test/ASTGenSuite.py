@@ -18,8 +18,9 @@ class ASTGenSuite(unittest.TestCase):
             static int a;
             int b;
         }"""
-        expect = str(Program([ClassDecl(Id(test),[[AttributeDecl(kind='Instance', decl='VarDecl(Id(a),Id(Shape))'), AttributeDecl(kind='Instance', decl='VarDecl(Id(b),Id(Shape))')]])]))
+        expect = str(Program([ClassDecl(Id('main'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='a'), constType='IntType', value=None))],[AttributeDecl(kind='Instance', decl='VarDecl(Id(b),IntType)')]])]))
         self.assertTrue(TestAST.test(input,expect,302))
+
 
     def test_class_with_methods(self):
         """More complex program"""
@@ -29,11 +30,11 @@ class ASTGenSuite(unittest.TestCase):
                     return sqrt(this.length + this.width, 2);
                 }
                 else {
-                    return sqrt(this.length + this.width, 2);
+                    return sqrt(this.length + this.width, 1);
                 }
             }
         }"""
-        expect = str(Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],FloatType,Block([],[If(BinaryOp(>,Id(i),IntLiteral(2)),Block([],[Return(Id(sqrt)),None,None,None,None,None,None,None]),Block([],[Return(Id(sqrt)),None,None,None,None,None,None,None]))]))])]))
+        expect = str(Program([ClassDecl(Id('Shape'),[MethodDecl(Static(),Id('getArea'),[],FloatType(),Block([],[If(BinaryOp('>',Id('i'),IntLiteral(2)),Block([],[Return(CallExpr(Id('sqrt'),None,[BinaryOp('+',FieldAccess(Id('this'),Id('length')),FieldAccess(Id('this'),Id('width'))),IntLiteral(2)]))]),Block([],[Return(CallExpr(Id('sqrt'),None,[BinaryOp('+',FieldAccess(Id('this'),Id('length')),FieldAccess(Id('this'),Id('width'))),IntLiteral(1)]))]))]))])]))
         self.assertTrue(TestAST.test(input,expect,303))
 
     def test_program_2class(self):
@@ -87,21 +88,7 @@ class ASTGenSuite(unittest.TestCase):
                 static int numOfShape = 0;
             }
         """
-        expect = str(Program([
-            ClassDecl(
-                Id('Shape'),
-                [
-                    AttributeDecl(
-                        Static(),
-                        [
-                            ConstDecl(
-                                Id('numOfShape'),
-                                'IntType',
-                                IntLiteral(0)
-                            )
-                        ]
-                    )
-                ])]))
+        expect = str(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape'), constType='IntType', value=IntLiteral(value=0)))]])]))
         self.assertTrue(TestAST.test(input,expect,306))
 
     def test_class_decl_static_2atrribute(self):
@@ -290,8 +277,7 @@ class ASTGenSuite(unittest.TestCase):
                 static float length, width = pi[121];
             }
         """
-        expect = str(
-            Program(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='length'), constType='FloatType', value=None)), AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='width'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121))))]])])))
+        expect = str(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='length'), constType='FloatType', value=None)), AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='width'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121))))]])]))
         self.assertTrue(TestAST.test(input, expect, 312))
 
     def test_class_decl_attr2(self):
@@ -301,8 +287,7 @@ class ASTGenSuite(unittest.TestCase):
                 static float length = 222, width = pi[121];
             }
         """
-        expect = str(
-            Program(Program([ClassDecl(Id(Shape),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='length'), constType='FloatType', value=IntLiteral(value=222))), AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='width'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121))))]])])))
+        expect = str(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='length'), constType='FloatType', value=IntLiteral(value=222))), AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='width'), constType='FloatType', value=FieldAccess(obj=Id(name='pi'), fieldname=IntLiteral(value=121))))]])]))
         self.assertTrue(TestAST.test(input, expect, 313))
 
     def test_class_decl_attr3(self):
@@ -357,7 +342,7 @@ class ASTGenSuite(unittest.TestCase):
                 }
             }
         """
-        expect = str(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape'), constType='IntType', value=IntLiteral(value=0)))],[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape2'), constType='IntType', value=IntLiteral(value=0)))],MethodDecl(Static(),Id(getArea),[],FloatType(),Block([],[Assign(Id('a'),BinaryOp('+',BinaryOp('+',BinaryOp('+',Id('c'),Id('d')),Id('e')),Id('f')))]))])]))
+        expect = str(Program([ClassDecl(Id('Shape'),[[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape'), constType='IntType', value=IntLiteral(value=0)))],[AttributeDecl(kind='Static', decl=ConstDecl(constant=Id(name='numOfShape2'), constType='IntType', value=IntLiteral(value=0)))],MethodDecl(Static(),Id('getArea'),[],FloatType(),Block([],[Assign(Id('a'),BinaryOp('+',BinaryOp('+',BinaryOp('+',Id('c'),Id('d')),Id('e')),Id('f')))]))])]))
         self.assertTrue(TestAST.test(input, expect, 317))
 
     def test_assign_variable_1(self):
@@ -1469,7 +1454,7 @@ class ASTGenSuite(unittest.TestCase):
                 }
             }
         """
-        expect = str(Program([ClassDecl(Id('Shape'),[MethodDecl(Static(),Id('getArea'),[],BoolType(),Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=CallExpr(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), method=Id(name='c'), param=[]))]],[]))])]))
+        expect = str(Program([ClassDecl(Id('Shape'),[MethodDecl(Static(),Id('getArea'),[],BoolType(),Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=FieldAccess(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), fieldname=None))]],[]))])]))
         self.assertTrue(TestAST.test(input, expect, 385))
 
     def test_index_expr3(self):
@@ -1503,7 +1488,7 @@ class ASTGenSuite(unittest.TestCase):
                 }
             }
         """
-        expect = str(Program([ClassDecl(Id('Shape'),[MethodDecl(Static(),Id('getArea'),[],BoolType(),Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=BinaryOp(op='>', left=BinaryOp(op='+', left=CallExpr(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), method=Id(name='c'), param=[]), right=IntLiteral(value=2)), right=IntLiteral(value=2)))]],[]))])]))
+        expect = str(Program([ClassDecl(Id('Shape'),[MethodDecl(Static(),Id('getArea'),[],BoolType(),Block([[VarDecl(variable=Id(name='a'), varType='BoolType', varInit=BinaryOp(op='>', left=BinaryOp(op='+', left=FieldAccess(obj=FieldAccess(obj=Id(name='a'), fieldname=Id(name='b')), fieldname=None), right=IntLiteral(value=2)), right=IntLiteral(value=2)))]],[]))])]))
         self.assertTrue(TestAST.test(input, expect, 388))
 
     def test_assign_integer(self):

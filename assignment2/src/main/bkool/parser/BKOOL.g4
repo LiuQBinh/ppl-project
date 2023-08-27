@@ -176,7 +176,7 @@ sign_expr: Sub sign_expr
 index_expr: index_expr
             (
                 (LSB expr RSB)+|
-                Member_access_in_ope class_expr (LP expr_list? RP)?
+                Member_access_in_ope invoke_expr (LP expr_list? RP)?
             )
 | invoke_expr;
 
