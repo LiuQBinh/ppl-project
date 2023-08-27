@@ -116,10 +116,12 @@ class TestAST:
         if line != expect:
             print(line+"*"+expect+"*")
 
-        print('linelinelinelinelinelinelinelinelinelineline')
-        print(line)
-        print('expectexpectexpectexpectexpectexpectexpectex')
-        print(expect)
+        if line != expect:
+            print(num)
+            print('linelinelinelinelinelinelinelinelinelineline')
+            print(line)
+            print('expectexpectexpectexpectexpectexpectexpectex')
+            print(expect)
         return line == expect
 
     @staticmethod

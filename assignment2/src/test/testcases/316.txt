@@ -3,7 +3,7 @@
                 static final int numOfShape = 0;
                 static final int numOfShape2 = 0;
                 static float getArea() {
-                  a:= c + d + e + f;
+                  a:= c / d / e / f;
                 }
             }
         

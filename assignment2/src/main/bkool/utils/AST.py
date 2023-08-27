@@ -115,7 +115,7 @@ class IntLiteral(Literal):
     value: int
 
     def __str__(self):
-        return "IntLit(" + str(self.value) + ")"
+        return "IntLiteral(" + str(self.value) + ")"
 
 
 @dataclass
@@ -176,7 +176,7 @@ class Assign(Stmt):
     exp: Expr
 
     def __str__(self):
-        return "AssignStmt(" + str(self.lhs) + "," + str(self.exp) + ")"
+        return "Assign(" + str(self.lhs) + "," + str(self.exp) + ")"
 
 
 @dataclass
@@ -308,7 +308,7 @@ class MethodDecl(MemDecl):
     body: Block
 
     def __str__(self):
-        return "MethodDecl(" + str(self.name) + ',' + str(self.kind) + ",[" + ','.join(
+        return "MethodDecl(" + str(self.kind) + ',' + str(self.name) + ",[" + ','.join(
             i.toParam() for i in self.param) + "]," + ((str(self.returnType) + ",") if self.returnType else "") + str(
             self.body) + ")"
 

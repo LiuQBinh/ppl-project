@@ -12,7 +12,7 @@ else:
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3}")
-        buf.write("\u020b\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u0213\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
@@ -45,27 +45,28 @@ def serializedATN():
         buf.write("\7$\u0149\n$\f$\16$\u014c\13$\3%\3%\3%\3%\5%\u0152\n%")
         buf.write("\3%\3%\5%\u0156\n%\3&\3&\5&\u015a\n&\3\'\3\'\3\'\7\'\u015f")
         buf.write("\n\'\f\'\16\'\u0162\13\'\3(\3(\3)\3)\3)\3)\3)\5)\u016b")
-        buf.write("\n)\3*\3*\3*\3*\3*\5*\u0172\n*\3+\3+\3+\3+\3+\5+\u0179")
-        buf.write("\n+\3,\3,\3,\3,\3,\3,\7,\u0181\n,\f,\16,\u0184\13,\3-")
-        buf.write("\3-\3-\3-\3-\3-\7-\u018c\n-\f-\16-\u018f\13-\3.\3.\3.")
-        buf.write("\5.\u0194\n.\3/\3/\3/\5/\u0199\n/\3\60\3\60\3\60\3\60")
-        buf.write("\3\60\3\60\3\60\3\60\6\60\u01a3\n\60\r\60\16\60\u01a4")
-        buf.write("\3\60\3\60\3\60\3\60\5\60\u01ab\n\60\3\60\5\60\u01ae\n")
-        buf.write("\60\5\60\u01b0\n\60\7\60\u01b2\n\60\f\60\16\60\u01b5\13")
-        buf.write("\60\3\61\3\61\3\61\3\61\5\61\u01bb\n\61\3\61\3\61\3\61")
-        buf.write("\5\61\u01c0\n\61\3\62\3\62\3\62\3\62\3\62\5\62\u01c7\n")
-        buf.write("\62\3\63\3\63\3\63\3\63\7\63\u01cd\n\63\f\63\16\63\u01d0")
-        buf.write("\13\63\3\63\3\63\3\63\5\63\u01d5\n\63\3\64\3\64\3\64\3")
-        buf.write("\64\3\64\3\64\3\64\3\64\3\64\3\64\5\64\u01e1\n\64\3\65")
-        buf.write("\3\65\3\65\7\65\u01e6\n\65\f\65\16\65\u01e9\13\65\3\66")
-        buf.write("\3\66\3\66\5\66\u01ee\n\66\3\66\3\66\3\67\3\67\3\67\7")
-        buf.write("\67\u01f5\n\67\f\67\16\67\u01f8\13\67\38\38\38\58\u01fd")
-        buf.write("\n8\38\38\39\39\39\79\u0204\n9\f9\169\u0207\139\3:\3:")
-        buf.write("\3:\2\5VX^;\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
-        buf.write("$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnpr\2\13")
-        buf.write("\6\2\4\4\35\35!!KK\4\2\35\35!!\4\2\20\20\22\22\3\2\30")
-        buf.write("\33\3\2\60\61\3\2*/\3\2()\3\2\"#\3\2$&\2\u0215\2u\3\2")
-        buf.write("\2\2\4{\3\2\2\2\6\u008a\3\2\2\2\b\u008f\3\2\2\2\n\u0091")
+        buf.write("\n)\3*\3*\3*\3*\3*\3*\7*\u0173\n*\f*\16*\u0176\13*\3+")
+        buf.write("\3+\3+\3+\3+\3+\7+\u017e\n+\f+\16+\u0181\13+\3,\3,\3,")
+        buf.write("\3,\3,\3,\7,\u0189\n,\f,\16,\u018c\13,\3-\3-\3-\3-\3-")
+        buf.write("\3-\7-\u0194\n-\f-\16-\u0197\13-\3.\3.\3.\5.\u019c\n.")
+        buf.write("\3/\3/\3/\5/\u01a1\n/\3\60\3\60\3\60\3\60\3\60\3\60\3")
+        buf.write("\60\3\60\6\60\u01ab\n\60\r\60\16\60\u01ac\3\60\3\60\3")
+        buf.write("\60\3\60\5\60\u01b3\n\60\3\60\5\60\u01b6\n\60\5\60\u01b8")
+        buf.write("\n\60\7\60\u01ba\n\60\f\60\16\60\u01bd\13\60\3\61\3\61")
+        buf.write("\3\61\3\61\5\61\u01c3\n\61\3\61\3\61\3\61\5\61\u01c8\n")
+        buf.write("\61\3\62\3\62\3\62\3\62\3\62\5\62\u01cf\n\62\3\63\3\63")
+        buf.write("\3\63\3\63\7\63\u01d5\n\63\f\63\16\63\u01d8\13\63\3\63")
+        buf.write("\3\63\3\63\5\63\u01dd\n\63\3\64\3\64\3\64\3\64\3\64\3")
+        buf.write("\64\3\64\3\64\3\64\3\64\5\64\u01e9\n\64\3\65\3\65\3\65")
+        buf.write("\7\65\u01ee\n\65\f\65\16\65\u01f1\13\65\3\66\3\66\3\66")
+        buf.write("\5\66\u01f6\n\66\3\66\3\66\3\67\3\67\3\67\7\67\u01fd\n")
+        buf.write("\67\f\67\16\67\u0200\13\67\38\38\38\58\u0205\n8\38\38")
+        buf.write("\39\39\39\79\u020c\n9\f9\169\u020f\139\3:\3:\3:\2\7RT")
+        buf.write("VX^;\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60")
+        buf.write("\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnpr\2\13\6\2\4\4")
+        buf.write("\35\35\65\65KK\4\2\35\35\65\65\4\2\20\20\22\22\3\2\30")
+        buf.write("\33\3\2/\60\3\2).\3\2\'(\3\2!\"\3\2#%\2\u021d\2u\3\2\2")
+        buf.write("\2\4{\3\2\2\2\6\u008a\3\2\2\2\b\u008f\3\2\2\2\n\u0091")
         buf.write("\3\2\2\2\f\u0099\3\2\2\2\16\u00a3\3\2\2\2\20\u00a7\3\2")
         buf.write("\2\2\22\u00aa\3\2\2\2\24\u00af\3\2\2\2\26\u00bb\3\2\2")
         buf.write("\2\30\u00c6\3\2\2\2\32\u00d1\3\2\2\2\34\u00d5\3\2\2\2")
@@ -76,11 +77,11 @@ def serializedATN():
         buf.write("\2\2:\u012e\3\2\2\2<\u0130\3\2\2\2>\u0132\3\2\2\2@\u0139")
         buf.write("\3\2\2\2B\u013b\3\2\2\2D\u0143\3\2\2\2F\u0145\3\2\2\2")
         buf.write("H\u014d\3\2\2\2J\u0159\3\2\2\2L\u015b\3\2\2\2N\u0163\3")
-        buf.write("\2\2\2P\u016a\3\2\2\2R\u0171\3\2\2\2T\u0178\3\2\2\2V\u017a")
-        buf.write("\3\2\2\2X\u0185\3\2\2\2Z\u0193\3\2\2\2\\\u0198\3\2\2\2")
-        buf.write("^\u019a\3\2\2\2`\u01bf\3\2\2\2b\u01c6\3\2\2\2d\u01d4\3")
-        buf.write("\2\2\2f\u01e0\3\2\2\2h\u01e2\3\2\2\2j\u01ea\3\2\2\2l\u01f1")
-        buf.write("\3\2\2\2n\u01f9\3\2\2\2p\u0200\3\2\2\2r\u0208\3\2\2\2")
+        buf.write("\2\2\2P\u016a\3\2\2\2R\u016c\3\2\2\2T\u0177\3\2\2\2V\u0182")
+        buf.write("\3\2\2\2X\u018d\3\2\2\2Z\u019b\3\2\2\2\\\u01a0\3\2\2\2")
+        buf.write("^\u01a2\3\2\2\2`\u01c7\3\2\2\2b\u01ce\3\2\2\2d\u01dc\3")
+        buf.write("\2\2\2f\u01e8\3\2\2\2h\u01ea\3\2\2\2j\u01f2\3\2\2\2l\u01f9")
+        buf.write("\3\2\2\2n\u0201\3\2\2\2p\u0208\3\2\2\2r\u0210\3\2\2\2")
         buf.write("tv\5\4\3\2ut\3\2\2\2vw\3\2\2\2wu\3\2\2\2wx\3\2\2\2xy\3")
         buf.write("\2\2\2yz\7\2\2\3z\3\3\2\2\2{|\7\3\2\2|\177\5\6\4\2}~\7")
         buf.write("\5\2\2~\u0080\5\6\4\2\177}\3\2\2\2\177\u0080\3\2\2\2\u0080")
@@ -108,9 +109,9 @@ def serializedATN():
         buf.write("\2\u00b4\u00b2\3\2\2\2\u00b5\u00b8\3\2\2\2\u00b6\u00b4")
         buf.write("\3\2\2\2\u00b6\u00b7\3\2\2\2\u00b7\u00b9\3\2\2\2\u00b8")
         buf.write("\u00b6\3\2\2\2\u00b9\u00ba\7w\2\2\u00ba\25\3\2\2\2\u00bb")
-        buf.write("\u00c2\7!\2\2\u00bc\u00be\7\64\2\2\u00bd\u00bc\3\2\2\2")
-        buf.write("\u00bd\u00be\3\2\2\2\u00be\u00bf\3\2\2\2\u00bf\u00c0\7")
-        buf.write("\17\2\2\u00c0\u00c1\3\2\2\2\u00c1\u00c3\5\30\r\2\u00c2")
+        buf.write("\u00c2\7\65\2\2\u00bc\u00be\7\63\2\2\u00bd\u00bc\3\2\2")
+        buf.write("\2\u00bd\u00be\3\2\2\2\u00be\u00bf\3\2\2\2\u00bf\u00c0")
+        buf.write("\7\17\2\2\u00c0\u00c1\3\2\2\2\u00c1\u00c3\5\30\r\2\u00c2")
         buf.write("\u00bd\3\2\2\2\u00c2\u00c3\3\2\2\2\u00c3\27\3\2\2\2\u00c4")
         buf.write("\u00c7\5N(\2\u00c5\u00c7\5*\26\2\u00c6\u00c4\3\2\2\2\u00c6")
         buf.write("\u00c5\3\2\2\2\u00c7\31\3\2\2\2\u00c8\u00d2\5\34\17\2")
@@ -130,7 +131,7 @@ def serializedATN():
         buf.write("\3\2\2\2\u00e8\u00e4\3\2\2\2\u00e8\u00e5\3\2\2\2\u00e8")
         buf.write("\u00e6\3\2\2\2\u00e8\u00e7\3\2\2\2\u00e9%\3\2\2\2\u00ea")
         buf.write("\u00eb\5^\60\2\u00eb\u00ec\7w\2\2\u00ec\'\3\2\2\2\u00ed")
-        buf.write("\u00ee\5^\60\2\u00ee\u00ef\7\64\2\2\u00ef\u00f0\7\17\2")
+        buf.write("\u00ee\5^\60\2\u00ee\u00ef\7\63\2\2\u00ef\u00f0\7\17\2")
         buf.write("\2\u00f0\u00f3\3\2\2\2\u00f1\u00f4\5N(\2\u00f2\u00f4\5")
         buf.write("*\26\2\u00f3\u00f1\3\2\2\2\u00f3\u00f2\3\2\2\2\u00f4\u00f5")
         buf.write("\3\2\2\2\u00f5\u00f6\7w\2\2\u00f6)\3\2\2\2\u00f7\u00f8")
@@ -146,112 +147,115 @@ def serializedATN():
         buf.write("\2\2\2\u010f\u0111\5\60\31\2\u0110\u010f\3\2\2\2\u0110")
         buf.write("\u0111\3\2\2\2\u0111/\3\2\2\2\u0112\u0113\7\f\2\2\u0113")
         buf.write("\u0114\5\32\16\2\u0114\61\3\2\2\2\u0115\u0116\7\16\2\2")
-        buf.write("\u0116\u0117\7!\2\2\u0117\u0118\7\64\2\2\u0118\u0119\7")
-        buf.write("\17\2\2\u0119\u011a\5N(\2\u011a\u011b\3\2\2\2\u011b\u011c")
-        buf.write("\t\4\2\2\u011c\u011d\5N(\2\u011d\u011e\7\21\2\2\u011e")
-        buf.write("\u011f\5\32\16\2\u011f\63\3\2\2\2\u0120\u0121\7\23\2\2")
-        buf.write("\u0121\u0122\7w\2\2\u0122\65\3\2\2\2\u0123\u0125\7\24")
-        buf.write("\2\2\u0124\u0126\5N(\2\u0125\u0124\3\2\2\2\u0125\u0126")
-        buf.write("\3\2\2\2\u0126\u0127\3\2\2\2\u0127\u0128\7w\2\2\u0128")
-        buf.write("\67\3\2\2\2\u0129\u012d\5<\37\2\u012a\u012d\5> \2\u012b")
-        buf.write("\u012d\5:\36\2\u012c\u0129\3\2\2\2\u012c\u012a\3\2\2\2")
-        buf.write("\u012c\u012b\3\2\2\2\u012d9\3\2\2\2\u012e\u012f\5\6\4")
-        buf.write("\2\u012f;\3\2\2\2\u0130\u0131\t\5\2\2\u0131=\3\2\2\2\u0132")
-        buf.write("\u0133\5<\37\2\u0133\u0135\7s\2\2\u0134\u0136\5@!\2\u0135")
-        buf.write("\u0134\3\2\2\2\u0135\u0136\3\2\2\2\u0136\u0137\3\2\2\2")
-        buf.write("\u0137\u0138\7t\2\2\u0138?\3\2\2\2\u0139\u013a\78\2\2")
-        buf.write("\u013aA\3\2\2\2\u013b\u0140\5D#\2\u013c\u013d\7y\2\2\u013d")
-        buf.write("\u013f\5D#\2\u013e\u013c\3\2\2\2\u013f\u0142\3\2\2\2\u0140")
-        buf.write("\u013e\3\2\2\2\u0140\u0141\3\2\2\2\u0141C\3\2\2\2\u0142")
-        buf.write("\u0140\3\2\2\2\u0143\u0144\7!\2\2\u0144E\3\2\2\2\u0145")
-        buf.write("\u014a\5H%\2\u0146\u0147\7y\2\2\u0147\u0149\5H%\2\u0148")
-        buf.write("\u0146\3\2\2\2\u0149\u014c\3\2\2\2\u014a\u0148\3\2\2\2")
-        buf.write("\u014a\u014b\3\2\2\2\u014bG\3\2\2\2\u014c\u014a\3\2\2")
-        buf.write("\2\u014d\u014e\58\35\2\u014e\u014f\5h\65\2\u014f\u0155")
-        buf.write("\3\2\2\2\u0150\u0152\7\64\2\2\u0151\u0150\3\2\2\2\u0151")
-        buf.write("\u0152\3\2\2\2\u0152\u0153\3\2\2\2\u0153\u0154\7\17\2")
-        buf.write("\2\u0154\u0156\5J&\2\u0155\u0151\3\2\2\2\u0155\u0156\3")
-        buf.write("\2\2\2\u0156I\3\2\2\2\u0157\u015a\5N(\2\u0158\u015a\5")
-        buf.write("*\26\2\u0159\u0157\3\2\2\2\u0159\u0158\3\2\2\2\u015aK")
-        buf.write("\3\2\2\2\u015b\u0160\5N(\2\u015c\u015d\7y\2\2\u015d\u015f")
-        buf.write("\5N(\2\u015e\u015c\3\2\2\2\u015f\u0162\3\2\2\2\u0160\u015e")
-        buf.write("\3\2\2\2\u0160\u0161\3\2\2\2\u0161M\3\2\2\2\u0162\u0160")
-        buf.write("\3\2\2\2\u0163\u0164\5P)\2\u0164O\3\2\2\2\u0165\u0166")
-        buf.write("\5R*\2\u0166\u0167\t\6\2\2\u0167\u0168\5R*\2\u0168\u016b")
-        buf.write("\3\2\2\2\u0169\u016b\5R*\2\u016a\u0165\3\2\2\2\u016a\u0169")
-        buf.write("\3\2\2\2\u016bQ\3\2\2\2\u016c\u016d\5T+\2\u016d\u016e")
-        buf.write("\t\7\2\2\u016e\u016f\5T+\2\u016f\u0172\3\2\2\2\u0170\u0172")
-        buf.write("\5T+\2\u0171\u016c\3\2\2\2\u0171\u0170\3\2\2\2\u0172S")
-        buf.write("\3\2\2\2\u0173\u0174\5V,\2\u0174\u0175\t\b\2\2\u0175\u0176")
-        buf.write("\5V,\2\u0176\u0179\3\2\2\2\u0177\u0179\5V,\2\u0178\u0173")
-        buf.write("\3\2\2\2\u0178\u0177\3\2\2\2\u0179U\3\2\2\2\u017a\u017b")
-        buf.write("\b,\1\2\u017b\u017c\5X-\2\u017c\u0182\3\2\2\2\u017d\u017e")
-        buf.write("\f\4\2\2\u017e\u017f\t\t\2\2\u017f\u0181\5X-\2\u0180\u017d")
-        buf.write("\3\2\2\2\u0181\u0184\3\2\2\2\u0182\u0180\3\2\2\2\u0182")
-        buf.write("\u0183\3\2\2\2\u0183W\3\2\2\2\u0184\u0182\3\2\2\2\u0185")
-        buf.write("\u0186\b-\1\2\u0186\u0187\5Z.\2\u0187\u018d\3\2\2\2\u0188")
-        buf.write("\u0189\f\4\2\2\u0189\u018a\t\n\2\2\u018a\u018c\5Z.\2\u018b")
-        buf.write("\u0188\3\2\2\2\u018c\u018f\3\2\2\2\u018d\u018b\3\2\2\2")
-        buf.write("\u018d\u018e\3\2\2\2\u018eY\3\2\2\2\u018f\u018d\3\2\2")
-        buf.write("\2\u0190\u0191\7\'\2\2\u0191\u0194\5Z.\2\u0192\u0194\5")
-        buf.write("\\/\2\u0193\u0190\3\2\2\2\u0193\u0192\3\2\2\2\u0194[\3")
-        buf.write("\2\2\2\u0195\u0196\7#\2\2\u0196\u0199\5\\/\2\u0197\u0199")
-        buf.write("\5^\60\2\u0198\u0195\3\2\2\2\u0198\u0197\3\2\2\2\u0199")
-        buf.write("]\3\2\2\2\u019a\u019b\b\60\1\2\u019b\u019c\5`\61\2\u019c")
-        buf.write("\u01b3\3\2\2\2\u019d\u01af\f\4\2\2\u019e\u019f\7s\2\2")
-        buf.write("\u019f\u01a0\5N(\2\u01a0\u01a1\7t\2\2\u01a1\u01a3\3\2")
-        buf.write("\2\2\u01a2\u019e\3\2\2\2\u01a3\u01a4\3\2\2\2\u01a4\u01a2")
-        buf.write("\3\2\2\2\u01a4\u01a5\3\2\2\2\u01a5\u01b0\3\2\2\2\u01a6")
-        buf.write("\u01a7\7\62\2\2\u01a7\u01ad\5`\61\2\u01a8\u01aa\7q\2\2")
-        buf.write("\u01a9\u01ab\5L\'\2\u01aa\u01a9\3\2\2\2\u01aa\u01ab\3")
-        buf.write("\2\2\2\u01ab\u01ac\3\2\2\2\u01ac\u01ae\7r\2\2\u01ad\u01a8")
-        buf.write("\3\2\2\2\u01ad\u01ae\3\2\2\2\u01ae\u01b0\3\2\2\2\u01af")
-        buf.write("\u01a2\3\2\2\2\u01af\u01a6\3\2\2\2\u01b0\u01b2\3\2\2\2")
-        buf.write("\u01b1\u019d\3\2\2\2\u01b2\u01b5\3\2\2\2\u01b3\u01b1\3")
-        buf.write("\2\2\2\u01b3\u01b4\3\2\2\2\u01b4_\3\2\2\2\u01b5\u01b3")
-        buf.write("\3\2\2\2\u01b6\u01b7\7R\2\2\u01b7\u01b8\5`\61\2\u01b8")
-        buf.write("\u01ba\7q\2\2\u01b9\u01bb\5L\'\2\u01ba\u01b9\3\2\2\2\u01ba")
-        buf.write("\u01bb\3\2\2\2\u01bb\u01bc\3\2\2\2\u01bc\u01bd\7r\2\2")
-        buf.write("\u01bd\u01c0\3\2\2\2\u01be\u01c0\5b\62\2\u01bf\u01b6\3")
-        buf.write("\2\2\2\u01bf\u01be\3\2\2\2\u01c0a\3\2\2\2\u01c1\u01c2")
-        buf.write("\7q\2\2\u01c2\u01c3\5N(\2\u01c3\u01c4\7r\2\2\u01c4\u01c7")
-        buf.write("\3\2\2\2\u01c5\u01c7\5d\63\2\u01c6\u01c1\3\2\2\2\u01c6")
-        buf.write("\u01c5\3\2\2\2\u01c7c\3\2\2\2\u01c8\u01c9\7u\2\2\u01c9")
-        buf.write("\u01ce\5f\64\2\u01ca\u01cb\7y\2\2\u01cb\u01cd\5f\64\2")
-        buf.write("\u01cc\u01ca\3\2\2\2\u01cd\u01d0\3\2\2\2\u01ce\u01cc\3")
-        buf.write("\2\2\2\u01ce\u01cf\3\2\2\2\u01cf\u01d1\3\2\2\2\u01d0\u01ce")
-        buf.write("\3\2\2\2\u01d1\u01d2\7v\2\2\u01d2\u01d5\3\2\2\2\u01d3")
-        buf.write("\u01d5\5f\64\2\u01d4\u01c8\3\2\2\2\u01d4\u01d3\3\2\2\2")
-        buf.write("\u01d5e\3\2\2\2\u01d6\u01e1\78\2\2\u01d7\u01e1\79\2\2")
-        buf.write("\u01d8\u01e1\7\65\2\2\u01d9\u01e1\7\66\2\2\u01da\u01e1")
-        buf.write("\5n8\2\u01db\u01e1\5j\66\2\u01dc\u01e1\7!\2\2\u01dd\u01e1")
-        buf.write("\7 \2\2\u01de\u01e1\5\6\4\2\u01df\u01e1\7Y\2\2\u01e0\u01d6")
-        buf.write("\3\2\2\2\u01e0\u01d7\3\2\2\2\u01e0\u01d8\3\2\2\2\u01e0")
-        buf.write("\u01d9\3\2\2\2\u01e0\u01da\3\2\2\2\u01e0\u01db\3\2\2\2")
-        buf.write("\u01e0\u01dc\3\2\2\2\u01e0\u01dd\3\2\2\2\u01e0\u01de\3")
-        buf.write("\2\2\2\u01e0\u01df\3\2\2\2\u01e1g\3\2\2\2\u01e2\u01e7")
-        buf.write("\7!\2\2\u01e3\u01e4\7y\2\2\u01e4\u01e6\7!\2\2\u01e5\u01e3")
-        buf.write("\3\2\2\2\u01e6\u01e9\3\2\2\2\u01e7\u01e5\3\2\2\2\u01e7")
-        buf.write("\u01e8\3\2\2\2\u01e8i\3\2\2\2\u01e9\u01e7\3\2\2\2\u01ea")
-        buf.write("\u01eb\7\34\2\2\u01eb\u01ed\7q\2\2\u01ec\u01ee\5l\67\2")
-        buf.write("\u01ed\u01ec\3\2\2\2\u01ed\u01ee\3\2\2\2\u01ee\u01ef\3")
-        buf.write("\2\2\2\u01ef\u01f0\7r\2\2\u01f0k\3\2\2\2\u01f1\u01f6\5")
-        buf.write("n8\2\u01f2\u01f3\7y\2\2\u01f3\u01f5\5n8\2\u01f4\u01f2")
-        buf.write("\3\2\2\2\u01f5\u01f8\3\2\2\2\u01f6\u01f4\3\2\2\2\u01f6")
-        buf.write("\u01f7\3\2\2\2\u01f7m\3\2\2\2\u01f8\u01f6\3\2\2\2\u01f9")
-        buf.write("\u01fa\7\34\2\2\u01fa\u01fc\7q\2\2\u01fb\u01fd\5p9\2\u01fc")
-        buf.write("\u01fb\3\2\2\2\u01fc\u01fd\3\2\2\2\u01fd\u01fe\3\2\2\2")
-        buf.write("\u01fe\u01ff\7r\2\2\u01ffo\3\2\2\2\u0200\u0205\5r:\2\u0201")
-        buf.write("\u0202\7y\2\2\u0202\u0204\5r:\2\u0203\u0201\3\2\2\2\u0204")
-        buf.write("\u0207\3\2\2\2\u0205\u0203\3\2\2\2\u0205\u0206\3\2\2\2")
-        buf.write("\u0206q\3\2\2\2\u0207\u0205\3\2\2\2\u0208\u0209\5N(\2")
-        buf.write("\u0209s\3\2\2\28w\177\u0085\u008f\u0094\u009e\u00a7\u00aa")
-        buf.write("\u00ad\u00b6\u00bd\u00c2\u00c6\u00cd\u00d1\u00d5\u00d9")
-        buf.write("\u00e8\u00f3\u00fb\u010c\u0110\u0125\u012c\u0135\u0140")
-        buf.write("\u014a\u0151\u0155\u0159\u0160\u016a\u0171\u0178\u0182")
-        buf.write("\u018d\u0193\u0198\u01a4\u01aa\u01ad\u01af\u01b3\u01ba")
-        buf.write("\u01bf\u01c6\u01ce\u01d4\u01e0\u01e7\u01ed\u01f6\u01fc")
-        buf.write("\u0205")
+        buf.write("\u0116\u0117\7\65\2\2\u0117\u0118\7\63\2\2\u0118\u0119")
+        buf.write("\7\17\2\2\u0119\u011a\5N(\2\u011a\u011b\3\2\2\2\u011b")
+        buf.write("\u011c\t\4\2\2\u011c\u011d\5N(\2\u011d\u011e\7\21\2\2")
+        buf.write("\u011e\u011f\5\32\16\2\u011f\63\3\2\2\2\u0120\u0121\7")
+        buf.write("\23\2\2\u0121\u0122\7w\2\2\u0122\65\3\2\2\2\u0123\u0125")
+        buf.write("\7\24\2\2\u0124\u0126\5N(\2\u0125\u0124\3\2\2\2\u0125")
+        buf.write("\u0126\3\2\2\2\u0126\u0127\3\2\2\2\u0127\u0128\7w\2\2")
+        buf.write("\u0128\67\3\2\2\2\u0129\u012d\5<\37\2\u012a\u012d\5> ")
+        buf.write("\2\u012b\u012d\5:\36\2\u012c\u0129\3\2\2\2\u012c\u012a")
+        buf.write("\3\2\2\2\u012c\u012b\3\2\2\2\u012d9\3\2\2\2\u012e\u012f")
+        buf.write("\5\6\4\2\u012f;\3\2\2\2\u0130\u0131\t\5\2\2\u0131=\3\2")
+        buf.write("\2\2\u0132\u0133\5<\37\2\u0133\u0135\7s\2\2\u0134\u0136")
+        buf.write("\5@!\2\u0135\u0134\3\2\2\2\u0135\u0136\3\2\2\2\u0136\u0137")
+        buf.write("\3\2\2\2\u0137\u0138\7t\2\2\u0138?\3\2\2\2\u0139\u013a")
+        buf.write("\78\2\2\u013aA\3\2\2\2\u013b\u0140\5D#\2\u013c\u013d\7")
+        buf.write("y\2\2\u013d\u013f\5D#\2\u013e\u013c\3\2\2\2\u013f\u0142")
+        buf.write("\3\2\2\2\u0140\u013e\3\2\2\2\u0140\u0141\3\2\2\2\u0141")
+        buf.write("C\3\2\2\2\u0142\u0140\3\2\2\2\u0143\u0144\7\65\2\2\u0144")
+        buf.write("E\3\2\2\2\u0145\u014a\5H%\2\u0146\u0147\7y\2\2\u0147\u0149")
+        buf.write("\5H%\2\u0148\u0146\3\2\2\2\u0149\u014c\3\2\2\2\u014a\u0148")
+        buf.write("\3\2\2\2\u014a\u014b\3\2\2\2\u014bG\3\2\2\2\u014c\u014a")
+        buf.write("\3\2\2\2\u014d\u014e\58\35\2\u014e\u014f\5h\65\2\u014f")
+        buf.write("\u0155\3\2\2\2\u0150\u0152\7\63\2\2\u0151\u0150\3\2\2")
+        buf.write("\2\u0151\u0152\3\2\2\2\u0152\u0153\3\2\2\2\u0153\u0154")
+        buf.write("\7\17\2\2\u0154\u0156\5J&\2\u0155\u0151\3\2\2\2\u0155")
+        buf.write("\u0156\3\2\2\2\u0156I\3\2\2\2\u0157\u015a\5N(\2\u0158")
+        buf.write("\u015a\5*\26\2\u0159\u0157\3\2\2\2\u0159\u0158\3\2\2\2")
+        buf.write("\u015aK\3\2\2\2\u015b\u0160\5N(\2\u015c\u015d\7y\2\2\u015d")
+        buf.write("\u015f\5N(\2\u015e\u015c\3\2\2\2\u015f\u0162\3\2\2\2\u0160")
+        buf.write("\u015e\3\2\2\2\u0160\u0161\3\2\2\2\u0161M\3\2\2\2\u0162")
+        buf.write("\u0160\3\2\2\2\u0163\u0164\5P)\2\u0164O\3\2\2\2\u0165")
+        buf.write("\u0166\5R*\2\u0166\u0167\t\6\2\2\u0167\u0168\5R*\2\u0168")
+        buf.write("\u016b\3\2\2\2\u0169\u016b\5R*\2\u016a\u0165\3\2\2\2\u016a")
+        buf.write("\u0169\3\2\2\2\u016bQ\3\2\2\2\u016c\u016d\b*\1\2\u016d")
+        buf.write("\u016e\5T+\2\u016e\u0174\3\2\2\2\u016f\u0170\f\4\2\2\u0170")
+        buf.write("\u0171\t\7\2\2\u0171\u0173\5T+\2\u0172\u016f\3\2\2\2\u0173")
+        buf.write("\u0176\3\2\2\2\u0174\u0172\3\2\2\2\u0174\u0175\3\2\2\2")
+        buf.write("\u0175S\3\2\2\2\u0176\u0174\3\2\2\2\u0177\u0178\b+\1\2")
+        buf.write("\u0178\u0179\5V,\2\u0179\u017f\3\2\2\2\u017a\u017b\f\4")
+        buf.write("\2\2\u017b\u017c\t\b\2\2\u017c\u017e\5V,\2\u017d\u017a")
+        buf.write("\3\2\2\2\u017e\u0181\3\2\2\2\u017f\u017d\3\2\2\2\u017f")
+        buf.write("\u0180\3\2\2\2\u0180U\3\2\2\2\u0181\u017f\3\2\2\2\u0182")
+        buf.write("\u0183\b,\1\2\u0183\u0184\5X-\2\u0184\u018a\3\2\2\2\u0185")
+        buf.write("\u0186\f\4\2\2\u0186\u0187\t\t\2\2\u0187\u0189\5X-\2\u0188")
+        buf.write("\u0185\3\2\2\2\u0189\u018c\3\2\2\2\u018a\u0188\3\2\2\2")
+        buf.write("\u018a\u018b\3\2\2\2\u018bW\3\2\2\2\u018c\u018a\3\2\2")
+        buf.write("\2\u018d\u018e\b-\1\2\u018e\u018f\5Z.\2\u018f\u0195\3")
+        buf.write("\2\2\2\u0190\u0191\f\4\2\2\u0191\u0192\t\n\2\2\u0192\u0194")
+        buf.write("\5Z.\2\u0193\u0190\3\2\2\2\u0194\u0197\3\2\2\2\u0195\u0193")
+        buf.write("\3\2\2\2\u0195\u0196\3\2\2\2\u0196Y\3\2\2\2\u0197\u0195")
+        buf.write("\3\2\2\2\u0198\u0199\7&\2\2\u0199\u019c\5Z.\2\u019a\u019c")
+        buf.write("\5\\/\2\u019b\u0198\3\2\2\2\u019b\u019a\3\2\2\2\u019c")
+        buf.write("[\3\2\2\2\u019d\u019e\7\"\2\2\u019e\u01a1\5\\/\2\u019f")
+        buf.write("\u01a1\5^\60\2\u01a0\u019d\3\2\2\2\u01a0\u019f\3\2\2\2")
+        buf.write("\u01a1]\3\2\2\2\u01a2\u01a3\b\60\1\2\u01a3\u01a4\5`\61")
+        buf.write("\2\u01a4\u01bb\3\2\2\2\u01a5\u01b7\f\4\2\2\u01a6\u01a7")
+        buf.write("\7s\2\2\u01a7\u01a8\5N(\2\u01a8\u01a9\7t\2\2\u01a9\u01ab")
+        buf.write("\3\2\2\2\u01aa\u01a6\3\2\2\2\u01ab\u01ac\3\2\2\2\u01ac")
+        buf.write("\u01aa\3\2\2\2\u01ac\u01ad\3\2\2\2\u01ad\u01b8\3\2\2\2")
+        buf.write("\u01ae\u01af\7\61\2\2\u01af\u01b5\5`\61\2\u01b0\u01b2")
+        buf.write("\7q\2\2\u01b1\u01b3\5L\'\2\u01b2\u01b1\3\2\2\2\u01b2\u01b3")
+        buf.write("\3\2\2\2\u01b3\u01b4\3\2\2\2\u01b4\u01b6\7r\2\2\u01b5")
+        buf.write("\u01b0\3\2\2\2\u01b5\u01b6\3\2\2\2\u01b6\u01b8\3\2\2\2")
+        buf.write("\u01b7\u01aa\3\2\2\2\u01b7\u01ae\3\2\2\2\u01b8\u01ba\3")
+        buf.write("\2\2\2\u01b9\u01a5\3\2\2\2\u01ba\u01bd\3\2\2\2\u01bb\u01b9")
+        buf.write("\3\2\2\2\u01bb\u01bc\3\2\2\2\u01bc_\3\2\2\2\u01bd\u01bb")
+        buf.write("\3\2\2\2\u01be\u01bf\7R\2\2\u01bf\u01c0\5`\61\2\u01c0")
+        buf.write("\u01c2\7q\2\2\u01c1\u01c3\5L\'\2\u01c2\u01c1\3\2\2\2\u01c2")
+        buf.write("\u01c3\3\2\2\2\u01c3\u01c4\3\2\2\2\u01c4\u01c5\7r\2\2")
+        buf.write("\u01c5\u01c8\3\2\2\2\u01c6\u01c8\5b\62\2\u01c7\u01be\3")
+        buf.write("\2\2\2\u01c7\u01c6\3\2\2\2\u01c8a\3\2\2\2\u01c9\u01ca")
+        buf.write("\7q\2\2\u01ca\u01cb\5N(\2\u01cb\u01cc\7r\2\2\u01cc\u01cf")
+        buf.write("\3\2\2\2\u01cd\u01cf\5d\63\2\u01ce\u01c9\3\2\2\2\u01ce")
+        buf.write("\u01cd\3\2\2\2\u01cfc\3\2\2\2\u01d0\u01d1\7u\2\2\u01d1")
+        buf.write("\u01d6\5f\64\2\u01d2\u01d3\7y\2\2\u01d3\u01d5\5f\64\2")
+        buf.write("\u01d4\u01d2\3\2\2\2\u01d5\u01d8\3\2\2\2\u01d6\u01d4\3")
+        buf.write("\2\2\2\u01d6\u01d7\3\2\2\2\u01d7\u01d9\3\2\2\2\u01d8\u01d6")
+        buf.write("\3\2\2\2\u01d9\u01da\7v\2\2\u01da\u01dd\3\2\2\2\u01db")
+        buf.write("\u01dd\5f\64\2\u01dc\u01d0\3\2\2\2\u01dc\u01db\3\2\2\2")
+        buf.write("\u01dde\3\2\2\2\u01de\u01e9\78\2\2\u01df\u01e9\79\2\2")
+        buf.write("\u01e0\u01e9\7\64\2\2\u01e1\u01e9\7\66\2\2\u01e2\u01e9")
+        buf.write("\5n8\2\u01e3\u01e9\5j\66\2\u01e4\u01e9\7\65\2\2\u01e5")
+        buf.write("\u01e9\7 \2\2\u01e6\u01e9\5\6\4\2\u01e7\u01e9\7Y\2\2\u01e8")
+        buf.write("\u01de\3\2\2\2\u01e8\u01df\3\2\2\2\u01e8\u01e0\3\2\2\2")
+        buf.write("\u01e8\u01e1\3\2\2\2\u01e8\u01e2\3\2\2\2\u01e8\u01e3\3")
+        buf.write("\2\2\2\u01e8\u01e4\3\2\2\2\u01e8\u01e5\3\2\2\2\u01e8\u01e6")
+        buf.write("\3\2\2\2\u01e8\u01e7\3\2\2\2\u01e9g\3\2\2\2\u01ea\u01ef")
+        buf.write("\7\65\2\2\u01eb\u01ec\7y\2\2\u01ec\u01ee\7\65\2\2\u01ed")
+        buf.write("\u01eb\3\2\2\2\u01ee\u01f1\3\2\2\2\u01ef\u01ed\3\2\2\2")
+        buf.write("\u01ef\u01f0\3\2\2\2\u01f0i\3\2\2\2\u01f1\u01ef\3\2\2")
+        buf.write("\2\u01f2\u01f3\7\34\2\2\u01f3\u01f5\7q\2\2\u01f4\u01f6")
+        buf.write("\5l\67\2\u01f5\u01f4\3\2\2\2\u01f5\u01f6\3\2\2\2\u01f6")
+        buf.write("\u01f7\3\2\2\2\u01f7\u01f8\7r\2\2\u01f8k\3\2\2\2\u01f9")
+        buf.write("\u01fe\5n8\2\u01fa\u01fb\7y\2\2\u01fb\u01fd\5n8\2\u01fc")
+        buf.write("\u01fa\3\2\2\2\u01fd\u0200\3\2\2\2\u01fe\u01fc\3\2\2\2")
+        buf.write("\u01fe\u01ff\3\2\2\2\u01ffm\3\2\2\2\u0200\u01fe\3\2\2")
+        buf.write("\2\u0201\u0202\7\34\2\2\u0202\u0204\7q\2\2\u0203\u0205")
+        buf.write("\5p9\2\u0204\u0203\3\2\2\2\u0204\u0205\3\2\2\2\u0205\u0206")
+        buf.write("\3\2\2\2\u0206\u0207\7r\2\2\u0207o\3\2\2\2\u0208\u020d")
+        buf.write("\5r:\2\u0209\u020a\7y\2\2\u020a\u020c\5r:\2\u020b\u0209")
+        buf.write("\3\2\2\2\u020c\u020f\3\2\2\2\u020d\u020b\3\2\2\2\u020d")
+        buf.write("\u020e\3\2\2\2\u020eq\3\2\2\2\u020f\u020d\3\2\2\2\u0210")
+        buf.write("\u0211\5N(\2\u0211s\3\2\2\28w\177\u0085\u008f\u0094\u009e")
+        buf.write("\u00a7\u00aa\u00ad\u00b6\u00bd\u00c2\u00c6\u00cd\u00d1")
+        buf.write("\u00d5\u00d9\u00e8\u00f3\u00fb\u010c\u0110\u0125\u012c")
+        buf.write("\u0135\u0140\u014a\u0151\u0155\u0159\u0160\u016a\u0174")
+        buf.write("\u017f\u018a\u0195\u019b\u01a0\u01ac\u01b2\u01b5\u01b7")
+        buf.write("\u01bb\u01c2\u01c7\u01ce\u01d6\u01dc\u01e8\u01ef\u01f5")
+        buf.write("\u01fe\u0204\u020d")
         return buf.getvalue()
 
 
@@ -298,25 +302,24 @@ class BKOOLParser ( Parser ):
                       "Break_word", "Return_word", "Comment_normal", "Comment_block", 
                       "Comment_sharp", "Bool_word", "Int_word", "Float_word", 
                       "Str_word", "Array_word", "Main_word", "Cons_word", 
-                      "Dest_word", "Self_word", "ID", "Add", "Sub", "Mul", 
-                      "Div", "Mod", "Not", "And", "Or", "Equal", "Diff", 
-                      "Greater", "Lesser", "Greater_euqal", "Lesser_equal", 
-                      "String_comp", "String_concat", "Member_access_in_ope", 
-                      "Member_access_out", "Colon", "BOOLEANLIT", "STRINGLIT", 
-                      "BLOCKCOMMENT", "INTLIT", "FLOATLIT", "PROGRAM", "MAIN", 
-                      "EXTENDS", "BREAK", "CONT", "IF", "ELSEIF", "ELSE", 
-                      "FOR", "BOOLTRUE", "BOOLFALSE", "ARRAY", "IN", "INT", 
-                      "FLOAT", "BOOL", "RETURN", "CLASS", "NULL", "VAL", 
-                      "VAR", "SELF", "CONS", "DEST", "KEYWORD_NEW", "BY", 
-                      "DO", "STRING", "THEN", "VOID", "NIL", "THIS", "FINAL", 
-                      "STATIC", "TO", "DOWNTO", "ADD_OP", "SUB_OP", "MUL_OP", 
-                      "FLOAT_DIVISION_OP", "MOD_OP", "NOT_OP", "AND_OP", 
-                      "OR_OP", "EQUAL_OP", "NOT_EQUAL_OP", "ASSIGN_OP", 
-                      "GREATER_OP", "LESS_OP", "GREATER_EQUAL_OP", "LESS_EQUAL_OP", 
-                      "STRING_COMP_OP", "STRING_CONCAT_OP", "CONCATENATION_OP", 
-                      "MEMBER_ACCESS_OUT", "LP", "RP", "LSB", "RSB", "LB", 
-                      "RB", "SEMI", "DOT", "COMA", "COLON", "WS", "UNTERMINATED_COMMENT", 
-                      "ERROR_CHAR" ]
+                      "Dest_word", "Self_word", "Add", "Sub", "Mul", "Div", 
+                      "Mod", "Not", "And", "Or", "Equal", "Diff", "Greater", 
+                      "Lesser", "Greater_euqal", "Lesser_equal", "String_comp", 
+                      "String_concat", "Member_access_in_ope", "Member_access_out", 
+                      "Colon", "BOOLEANLIT", "ID", "STRINGLIT", "BLOCKCOMMENT", 
+                      "INTLIT", "FLOATLIT", "PROGRAM", "MAIN", "EXTENDS", 
+                      "BREAK", "CONT", "IF", "ELSEIF", "ELSE", "FOR", "BOOLTRUE", 
+                      "BOOLFALSE", "ARRAY", "IN", "INT", "FLOAT", "BOOL", 
+                      "RETURN", "CLASS", "NULL", "VAL", "VAR", "SELF", "CONS", 
+                      "DEST", "KEYWORD_NEW", "BY", "DO", "STRING", "THEN", 
+                      "VOID", "NIL", "THIS", "FINAL", "STATIC", "TO", "DOWNTO", 
+                      "ADD_OP", "SUB_OP", "MUL_OP", "FLOAT_DIVISION_OP", 
+                      "MOD_OP", "NOT_OP", "AND_OP", "OR_OP", "EQUAL_OP", 
+                      "NOT_EQUAL_OP", "ASSIGN_OP", "GREATER_OP", "LESS_OP", 
+                      "GREATER_EQUAL_OP", "LESS_EQUAL_OP", "STRING_COMP_OP", 
+                      "STRING_CONCAT_OP", "CONCATENATION_OP", "MEMBER_ACCESS_OUT", 
+                      "LP", "RP", "LSB", "RSB", "LB", "RB", "SEMI", "DOT", 
+                      "COMA", "COLON", "WS", "UNTERMINATED_COMMENT", "ERROR_CHAR" ]
 
     RULE_program = 0
     RULE_class_decl = 1
@@ -422,27 +425,27 @@ class BKOOLParser ( Parser ):
     Cons_word=28
     Dest_word=29
     Self_word=30
-    ID=31
-    Add=32
-    Sub=33
-    Mul=34
-    Div=35
-    Mod=36
-    Not=37
-    And=38
-    Or=39
-    Equal=40
-    Diff=41
-    Greater=42
-    Lesser=43
-    Greater_euqal=44
-    Lesser_equal=45
-    String_comp=46
-    String_concat=47
-    Member_access_in_ope=48
-    Member_access_out=49
-    Colon=50
-    BOOLEANLIT=51
+    Add=31
+    Sub=32
+    Mul=33
+    Div=34
+    Mod=35
+    Not=36
+    And=37
+    Or=38
+    Equal=39
+    Diff=40
+    Greater=41
+    Lesser=42
+    Greater_euqal=43
+    Lesser_equal=44
+    String_comp=45
+    String_concat=46
+    Member_access_in_ope=47
+    Member_access_out=48
+    Colon=49
+    BOOLEANLIT=50
+    ID=51
     STRINGLIT=52
     BLOCKCOMMENT=53
     INTLIT=54
@@ -1287,7 +1290,7 @@ class BKOOLParser ( Parser ):
             self.state = 196
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 194
                 self.expr()
@@ -1363,7 +1366,7 @@ class BKOOLParser ( Parser ):
                 self.state = 203
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Final_word) | (1 << BKOOLParser.If_word) | (1 << BKOOLParser.For_word) | (1 << BKOOLParser.Break_word) | (1 << BKOOLParser.Return_word) | (1 << BKOOLParser.Bool_word) | (1 << BKOOLParser.Int_word) | (1 << BKOOLParser.Float_word) | (1 << BKOOLParser.Str_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Final_word) | (1 << BKOOLParser.If_word) | (1 << BKOOLParser.For_word) | (1 << BKOOLParser.Break_word) | (1 << BKOOLParser.Return_word) | (1 << BKOOLParser.Bool_word) | (1 << BKOOLParser.Int_word) | (1 << BKOOLParser.Float_word) | (1 << BKOOLParser.Str_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
                     self.state = 200
                     self.block_stmt_list()
                     self.state = 205
@@ -1790,7 +1793,7 @@ class BKOOLParser ( Parser ):
             self.state = 241
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.state = 239
                 self.expr()
                 pass
@@ -1864,7 +1867,7 @@ class BKOOLParser ( Parser ):
             self.state = 249
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
                 self.state = 248
                 self.expr_list()
 
@@ -2245,7 +2248,7 @@ class BKOOLParser ( Parser ):
             self.state = 291
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
                 self.state = 290
                 self.expr()
 
@@ -2798,7 +2801,7 @@ class BKOOLParser ( Parser ):
             self.state = 343
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            if token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.Sub, BKOOLParser.Not, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.state = 341
                 self.expr()
                 pass
@@ -2964,7 +2967,7 @@ class BKOOLParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 355
-                self.relational_expr()
+                self.relational_expr(0)
                 self.state = 356
                 _la = self._input.LA(1)
                 if not(_la==BKOOLParser.String_comp or _la==BKOOLParser.String_concat):
@@ -2973,13 +2976,13 @@ class BKOOLParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 357
-                self.relational_expr()
+                self.relational_expr(0)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 359
-                self.relational_expr()
+                self.relational_expr(0)
                 pass
 
 
@@ -2999,11 +3002,12 @@ class BKOOLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def logical_expr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(BKOOLParser.Logical_exprContext)
-            else:
-                return self.getTypedRuleContext(BKOOLParser.Logical_exprContext,i)
+        def logical_expr(self):
+            return self.getTypedRuleContext(BKOOLParser.Logical_exprContext,0)
+
+
+        def relational_expr(self):
+            return self.getTypedRuleContext(BKOOLParser.Relational_exprContext,0)
 
 
         def Equal(self):
@@ -3035,44 +3039,52 @@ class BKOOLParser ( Parser ):
 
 
 
-
-    def relational_expr(self):
-
-        localctx = BKOOLParser.Relational_exprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 80, self.RULE_relational_expr)
+    def relational_expr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = BKOOLParser.Relational_exprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 80
+        self.enterRecursionRule(localctx, 80, self.RULE_relational_expr, _p)
         self._la = 0 # Token type
         try:
-            self.state = 367
+            self.enterOuterAlt(localctx, 1)
+            self.state = 363
+            self.logical_expr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 370
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
-            if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 362
-                self.logical_expr()
-                self.state = 363
-                _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Equal) | (1 << BKOOLParser.Diff) | (1 << BKOOLParser.Greater) | (1 << BKOOLParser.Lesser) | (1 << BKOOLParser.Greater_euqal) | (1 << BKOOLParser.Lesser_equal))) != 0)):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 364
-                self.logical_expr()
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 366
-                self.logical_expr()
-                pass
-
+            _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = BKOOLParser.Relational_exprContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_relational_expr)
+                    self.state = 365
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 366
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Equal) | (1 << BKOOLParser.Diff) | (1 << BKOOLParser.Greater) | (1 << BKOOLParser.Lesser) | (1 << BKOOLParser.Greater_euqal) | (1 << BKOOLParser.Lesser_equal))) != 0)):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 367
+                    self.logical_expr(0) 
+                self.state = 372
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -3083,11 +3095,12 @@ class BKOOLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def adding_expr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(BKOOLParser.Adding_exprContext)
-            else:
-                return self.getTypedRuleContext(BKOOLParser.Adding_exprContext,i)
+        def adding_expr(self):
+            return self.getTypedRuleContext(BKOOLParser.Adding_exprContext,0)
+
+
+        def logical_expr(self):
+            return self.getTypedRuleContext(BKOOLParser.Logical_exprContext,0)
 
 
         def And(self):
@@ -3107,44 +3120,52 @@ class BKOOLParser ( Parser ):
 
 
 
-
-    def logical_expr(self):
-
-        localctx = BKOOLParser.Logical_exprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 82, self.RULE_logical_expr)
+    def logical_expr(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = BKOOLParser.Logical_exprContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 82
+        self.enterRecursionRule(localctx, 82, self.RULE_logical_expr, _p)
         self._la = 0 # Token type
         try:
+            self.enterOuterAlt(localctx, 1)
             self.state = 374
+            self.adding_expr(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 381
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
-            if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 369
-                self.adding_expr(0)
-                self.state = 370
-                _la = self._input.LA(1)
-                if not(_la==BKOOLParser.And or _la==BKOOLParser.Or):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 371
-                self.adding_expr(0)
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 373
-                self.adding_expr(0)
-                pass
-
+            _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = BKOOLParser.Logical_exprContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_logical_expr)
+                    self.state = 376
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 377
+                    _la = self._input.LA(1)
+                    if not(_la==BKOOLParser.And or _la==BKOOLParser.Or):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 378
+                    self.adding_expr(0) 
+                self.state = 383
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
             self._errHandler.recover(self, re)
         finally:
-            self.exitRule()
+            self.unrollRecursionContexts(_parentctx)
         return localctx
 
 
@@ -3190,10 +3211,10 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 377
+            self.state = 385
             self.multiplying_expr(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 384
+            self.state = 392
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -3203,20 +3224,20 @@ class BKOOLParser ( Parser ):
                     _prevctx = localctx
                     localctx = BKOOLParser.Adding_exprContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_adding_expr)
-                    self.state = 379
+                    self.state = 387
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 380
+                    self.state = 388
                     _la = self._input.LA(1)
                     if not(_la==BKOOLParser.Add or _la==BKOOLParser.Sub):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 381
+                    self.state = 389
                     self.multiplying_expr(0) 
-                self.state = 386
+                self.state = 394
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
 
@@ -3274,10 +3295,10 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 388
+            self.state = 396
             self.logical_not_expr()
             self._ctx.stop = self._input.LT(-1)
-            self.state = 395
+            self.state = 403
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,35,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -3287,20 +3308,20 @@ class BKOOLParser ( Parser ):
                     _prevctx = localctx
                     localctx = BKOOLParser.Multiplying_exprContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_multiplying_expr)
-                    self.state = 390
+                    self.state = 398
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 391
+                    self.state = 399
                     _la = self._input.LA(1)
                     if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Mul) | (1 << BKOOLParser.Div) | (1 << BKOOLParser.Mod))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 392
+                    self.state = 400
                     self.logical_not_expr() 
-                self.state = 397
+                self.state = 405
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,35,self._ctx)
 
@@ -3348,19 +3369,19 @@ class BKOOLParser ( Parser ):
         localctx = BKOOLParser.Logical_not_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_logical_not_expr)
         try:
-            self.state = 401
+            self.state = 409
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [BKOOLParser.Not]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 398
+                self.state = 406
                 self.match(BKOOLParser.Not)
-                self.state = 399
+                self.state = 407
                 self.logical_not_expr()
                 pass
-            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.Sub, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.Sub, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 400
+                self.state = 408
                 self.sign_expr()
                 pass
             else:
@@ -3410,19 +3431,19 @@ class BKOOLParser ( Parser ):
         localctx = BKOOLParser.Sign_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_sign_expr)
         try:
-            self.state = 406
+            self.state = 414
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [BKOOLParser.Sub]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 403
+                self.state = 411
                 self.match(BKOOLParser.Sub)
-                self.state = 404
+                self.state = 412
                 self.sign_expr()
                 pass
-            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.KEYWORD_NEW, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 405
+                self.state = 413
                 self.index_expr(0)
                 pass
             else:
@@ -3505,10 +3526,10 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 409
+            self.state = 417
             self.class_expr()
             self._ctx.stop = self._input.LT(-1)
-            self.state = 433
+            self.state = 441
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,42,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -3518,53 +3539,53 @@ class BKOOLParser ( Parser ):
                     _prevctx = localctx
                     localctx = BKOOLParser.Index_exprContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_index_expr)
-                    self.state = 411
+                    self.state = 419
                     if not self.precpred(self._ctx, 2):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 429
+                    self.state = 437
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
                     if token in [BKOOLParser.LSB]:
-                        self.state = 416 
+                        self.state = 424 
                         self._errHandler.sync(self)
                         _alt = 1
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                             if _alt == 1:
-                                self.state = 412
+                                self.state = 420
                                 self.match(BKOOLParser.LSB)
-                                self.state = 413
+                                self.state = 421
                                 self.expr()
-                                self.state = 414
+                                self.state = 422
                                 self.match(BKOOLParser.RSB)
 
                             else:
                                 raise NoViableAltException(self)
-                            self.state = 418 
+                            self.state = 426 
                             self._errHandler.sync(self)
                             _alt = self._interp.adaptivePredict(self._input,38,self._ctx)
 
                         pass
                     elif token in [BKOOLParser.Member_access_in_ope]:
-                        self.state = 420
+                        self.state = 428
                         self.match(BKOOLParser.Member_access_in_ope)
-                        self.state = 421
+                        self.state = 429
                         self.class_expr()
-                        self.state = 427
+                        self.state = 435
                         self._errHandler.sync(self)
                         la_ = self._interp.adaptivePredict(self._input,40,self._ctx)
                         if la_ == 1:
-                            self.state = 422
+                            self.state = 430
                             self.match(BKOOLParser.LP)
-                            self.state = 424
+                            self.state = 432
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
-                                self.state = 423
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+                                self.state = 431
                                 self.expr_list()
 
 
-                            self.state = 426
+                            self.state = 434
                             self.match(BKOOLParser.RP)
 
 
@@ -3572,7 +3593,7 @@ class BKOOLParser ( Parser ):
                     else:
                         raise NoViableAltException(self)
              
-                self.state = 435
+                self.state = 443
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,42,self._ctx)
 
@@ -3631,31 +3652,31 @@ class BKOOLParser ( Parser ):
         self.enterRule(localctx, 94, self.RULE_class_expr)
         self._la = 0 # Token type
         try:
-            self.state = 445
+            self.state = 453
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [BKOOLParser.KEYWORD_NEW]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 436
+                self.state = 444
                 self.match(BKOOLParser.KEYWORD_NEW)
-                self.state = 437
+                self.state = 445
                 self.class_expr()
-                self.state = 438
+                self.state = 446
                 self.match(BKOOLParser.LP)
-                self.state = 440
+                self.state = 448
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
-                    self.state = 439
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+                    self.state = 447
                     self.expr_list()
 
 
-                self.state = 442
+                self.state = 450
                 self.match(BKOOLParser.RP)
                 pass
-            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
+            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS, BKOOLParser.LP, BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 444
+                self.state = 452
                 self.piority_exp()
                 pass
             else:
@@ -3708,21 +3729,21 @@ class BKOOLParser ( Parser ):
         localctx = BKOOLParser.Piority_expContext(self, self._ctx, self.state)
         self.enterRule(localctx, 96, self.RULE_piority_exp)
         try:
-            self.state = 452
+            self.state = 460
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [BKOOLParser.LP]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 447
+                self.state = 455
                 self.match(BKOOLParser.LP)
-                self.state = 448
+                self.state = 456
                 self.expr()
-                self.state = 449
+                self.state = 457
                 self.match(BKOOLParser.RP)
                 pass
-            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS, BKOOLParser.LB]:
+            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS, BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 451
+                self.state = 459
                 self.array_exp()
                 pass
             else:
@@ -3781,33 +3802,33 @@ class BKOOLParser ( Parser ):
         self.enterRule(localctx, 98, self.RULE_array_exp)
         self._la = 0 # Token type
         try:
-            self.state = 466
+            self.state = 474
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [BKOOLParser.LB]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 454
+                self.state = 462
                 self.match(BKOOLParser.LB)
-                self.state = 455
+                self.state = 463
                 self.operands()
-                self.state = 460
+                self.state = 468
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==BKOOLParser.COMA:
-                    self.state = 456
+                    self.state = 464
                     self.match(BKOOLParser.COMA)
-                    self.state = 457
+                    self.state = 465
                     self.operands()
-                    self.state = 462
+                    self.state = 470
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-                self.state = 463
+                self.state = 471
                 self.match(BKOOLParser.RB)
                 pass
-            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.ID, BKOOLParser.BOOLEANLIT, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS]:
+            elif token in [BKOOLParser.Prog_word, BKOOLParser.Array_word, BKOOLParser.Main_word, BKOOLParser.Self_word, BKOOLParser.BOOLEANLIT, BKOOLParser.ID, BKOOLParser.STRINGLIT, BKOOLParser.INTLIT, BKOOLParser.FLOATLIT, BKOOLParser.CLASS, BKOOLParser.THIS]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 465
+                self.state = 473
                 self.operands()
                 pass
             else:
@@ -3879,66 +3900,66 @@ class BKOOLParser ( Parser ):
         localctx = BKOOLParser.OperandsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 100, self.RULE_operands)
         try:
-            self.state = 478
+            self.state = 486
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 468
+                self.state = 476
                 self.match(BKOOLParser.INTLIT)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 469
+                self.state = 477
                 self.match(BKOOLParser.FLOATLIT)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 470
+                self.state = 478
                 self.match(BKOOLParser.BOOLEANLIT)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 471
+                self.state = 479
                 self.match(BKOOLParser.STRINGLIT)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 472
+                self.state = 480
                 self.arrayLIT()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 473
+                self.state = 481
                 self.multi_ArrayLIT()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 474
+                self.state = 482
                 self.match(BKOOLParser.ID)
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 475
+                self.state = 483
                 self.match(BKOOLParser.Self_word)
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 476
+                self.state = 484
                 self.class_name()
                 pass
 
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
-                self.state = 477
+                self.state = 485
                 self.match(BKOOLParser.THIS)
                 pass
 
@@ -3989,18 +4010,18 @@ class BKOOLParser ( Parser ):
         self.enterRule(localctx, 102, self.RULE_idlist)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 480
+            self.state = 488
             self.match(BKOOLParser.ID)
-            self.state = 485
+            self.state = 493
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,49,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 481
+                    self.state = 489
                     self.match(BKOOLParser.COMA)
-                    self.state = 482
+                    self.state = 490
                     self.match(BKOOLParser.ID) 
-                self.state = 487
+                self.state = 495
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,49,self._ctx)
 
@@ -4052,19 +4073,19 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 488
+            self.state = 496
             self.match(BKOOLParser.Array_word)
-            self.state = 489
+            self.state = 497
             self.match(BKOOLParser.LP)
-            self.state = 491
+            self.state = 499
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==BKOOLParser.Array_word:
-                self.state = 490
+                self.state = 498
                 self.array_list()
 
 
-            self.state = 493
+            self.state = 501
             self.match(BKOOLParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -4114,17 +4135,17 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 495
+            self.state = 503
             self.arrayLIT()
-            self.state = 500
+            self.state = 508
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==BKOOLParser.COMA:
-                self.state = 496
+                self.state = 504
                 self.match(BKOOLParser.COMA)
-                self.state = 497
+                self.state = 505
                 self.arrayLIT()
-                self.state = 502
+                self.state = 510
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -4176,19 +4197,19 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 503
+            self.state = 511
             self.match(BKOOLParser.Array_word)
-            self.state = 504
+            self.state = 512
             self.match(BKOOLParser.LP)
-            self.state = 506
+            self.state = 514
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
-                self.state = 505
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << BKOOLParser.Prog_word) | (1 << BKOOLParser.Array_word) | (1 << BKOOLParser.Main_word) | (1 << BKOOLParser.Self_word) | (1 << BKOOLParser.Sub) | (1 << BKOOLParser.Not) | (1 << BKOOLParser.BOOLEANLIT) | (1 << BKOOLParser.ID) | (1 << BKOOLParser.STRINGLIT) | (1 << BKOOLParser.INTLIT) | (1 << BKOOLParser.FLOATLIT))) != 0) or ((((_la - 73)) & ~0x3f) == 0 and ((1 << (_la - 73)) & ((1 << (BKOOLParser.CLASS - 73)) | (1 << (BKOOLParser.KEYWORD_NEW - 73)) | (1 << (BKOOLParser.THIS - 73)) | (1 << (BKOOLParser.LP - 73)) | (1 << (BKOOLParser.LB - 73)))) != 0):
+                self.state = 513
                 self.element_list()
 
 
-            self.state = 508
+            self.state = 516
             self.match(BKOOLParser.RP)
         except RecognitionException as re:
             localctx.exception = re
@@ -4238,17 +4259,17 @@ class BKOOLParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 510
+            self.state = 518
             self.elements()
-            self.state = 515
+            self.state = 523
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==BKOOLParser.COMA:
-                self.state = 511
+                self.state = 519
                 self.match(BKOOLParser.COMA)
-                self.state = 512
+                self.state = 520
                 self.elements()
-                self.state = 517
+                self.state = 525
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -4290,7 +4311,7 @@ class BKOOLParser ( Parser ):
         self.enterRule(localctx, 112, self.RULE_elements)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 518
+            self.state = 526
             self.expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -4305,6 +4326,8 @@ class BKOOLParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
+        self._predicates[40] = self.relational_expr_sempred
+        self._predicates[41] = self.logical_expr_sempred
         self._predicates[42] = self.adding_expr_sempred
         self._predicates[43] = self.multiplying_expr_sempred
         self._predicates[46] = self.index_expr_sempred
@@ -4314,18 +4337,28 @@ class BKOOLParser ( Parser ):
         else:
             return pred(localctx, predIndex)
 
-    def adding_expr_sempred(self, localctx:Adding_exprContext, predIndex:int):
+    def relational_expr_sempred(self, localctx:Relational_exprContext, predIndex:int):
             if predIndex == 0:
                 return self.precpred(self._ctx, 2)
          
 
-    def multiplying_expr_sempred(self, localctx:Multiplying_exprContext, predIndex:int):
+    def logical_expr_sempred(self, localctx:Logical_exprContext, predIndex:int):
             if predIndex == 1:
                 return self.precpred(self._ctx, 2)
          
 
-    def index_expr_sempred(self, localctx:Index_exprContext, predIndex:int):
+    def adding_expr_sempred(self, localctx:Adding_exprContext, predIndex:int):
             if predIndex == 2:
+                return self.precpred(self._ctx, 2)
+         
+
+    def multiplying_expr_sempred(self, localctx:Multiplying_exprContext, predIndex:int):
+            if predIndex == 3:
+                return self.precpred(self._ctx, 2)
+         
+
+    def index_expr_sempred(self, localctx:Index_exprContext, predIndex:int):
+            if predIndex == 4:
                 return self.precpred(self._ctx, 2)
          
 

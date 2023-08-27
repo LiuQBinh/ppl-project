@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Shape),[MethodDecl(Id(getArea),Static,[],FloatType,Block([],[For(Id(i),IntLit(2232),IntLit(12121),False,Block([],[AssignStmt(Id(a),IntLit(1))])])]))])])
+Program([ClassDecl(Id(Shape),[MethodDecl(Static,Id(getArea),[],FloatType,Block([],[For(Id(i),IntLiteral(2232),IntLiteral(12121),True,Block([],[Assign(Id(a),IntLiteral(1))])])]))])])

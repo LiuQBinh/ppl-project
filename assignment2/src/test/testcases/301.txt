@@ -1,5 +1,3 @@
-
-            class Shape {
-                static int numOfShape = 0;
-            }
-        
+class test {
+            Shape a, b;
+        }

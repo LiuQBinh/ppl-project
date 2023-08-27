@@ -75,11 +75,11 @@ class ASTGeneration(BKOOLVisitor):
     # Visit a parse tree produced by BKOOLParser#methods.
     def visitMethods(self, ctx: BKOOLParser.MethodsContext):
         return MethodDecl(
-            self.visit(ctx.class_props_kind()),
-            self.visit(ctx.methods_name()),
-            self.visit(ctx.paramlist()) if ctx.paramlist() is not None else [],
-            self.visit(ctx.methods_return_types()),
-            self.visit(ctx.block_stmt()),
+            kind=self.visit(ctx.class_props_kind()),
+            name=self.visit(ctx.methods_name()),
+            param=self.visit(ctx.paramlist()) if ctx.paramlist() is not None else [],
+            returnType=self.visit(ctx.methods_return_types()),
+            body=self.visit(ctx.block_stmt()),
         )
 
     # Visit a parse tree produced by BKOOLParser#methods_name.
@@ -99,11 +99,12 @@ class ASTGeneration(BKOOLVisitor):
 
         if class_props_kind.Static_word() is not None:
             decl = [
-                str(ConstDecl(
-                    str(Id(attribute_as.ID().getText())),
+                ConstDecl(
+                    Id(attribute_as.ID().getText()),
                     self.visit(ctx.types()),
-                    self.visit(attribute_as.attribute_as_val()) if attribute_as.attribute_as_val() is not None else None,
-                )) for attribute_as in ctx.attribute_as()
+                    self.visit(
+                        attribute_as.attribute_as_val()) if attribute_as.attribute_as_val() is not None else None,
+                ) for attribute_as in ctx.attribute_as()
             ]
             kind = Static()
         else:
@@ -348,11 +349,10 @@ class ASTGeneration(BKOOLVisitor):
 
     # Visit a parse tree produced by BKOOLParser#relational_expr.
     def visitRelational_expr(self, ctx: BKOOLParser.Relational_exprContext):
-        relational_expr = ctx.logical_expr()
-        if isinstance(relational_expr, BKOOLParser.Logical_exprContext):
-            return self.visit(relational_expr)
-        if relational_expr.__len__() == 1:
-            return self.visit(relational_expr[0])
+        relational_expr = ctx.relational_expr()
+        logical_expr = ctx.logical_expr()
+        if relational_expr is None:
+            return self.visit(ctx.logical_expr())
         ope = ''
         if ctx.Equal() is not None:
             ope = '=='
@@ -366,21 +366,20 @@ class ASTGeneration(BKOOLVisitor):
             ope = '>='
         if ctx.Lesser_equal() is not None:
             ope = '<='
-        return BinaryOp(ope, self.visit(relational_expr[0]), self.visit(relational_expr[1]))
+        return BinaryOp(ope, self.visit(relational_expr), self.visit(logical_expr))
 
     # Visit a parse tree produced by BKOOLParser#logical_expr.
     def visitLogical_expr(self, ctx: BKOOLParser.Logical_exprContext):
+        logical_expr = ctx.logical_expr()
         adding_expr = ctx.adding_expr()
-        if isinstance(adding_expr, BKOOLParser.Adding_exprContext):
-            return self.visit(adding_expr)
-        if adding_expr.__len__() == 1:
-            return self.visit(adding_expr[0])
+        if logical_expr is None:
+            return self.visit(ctx.adding_expr())
         ope = ''
         if ctx.And() is not None:
             ope = '&&'
         if ctx.Or() is not None:
             ope = '||'
-        return BooleanLiteral(self.visit(adding_expr[0]) + ope + self.visit(adding_expr[1]))
+        return BinaryOp(ope, self.visit(logical_expr), self.visit(adding_expr))
 
     # Visit a parse tree produced by BKOOLParser#adding_expr.
     def visitAdding_expr(self, ctx: BKOOLParser.Adding_exprContext):

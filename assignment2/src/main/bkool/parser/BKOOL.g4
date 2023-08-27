@@ -155,10 +155,10 @@ expr: string_expr;
 string_expr: relational_expr (String_comp | String_concat) relational_expr
 | relational_expr;
 
-relational_expr: logical_expr (Equal | Diff | Greater | Lesser | Greater_euqal | Lesser_equal) logical_expr
+relational_expr: relational_expr (Equal | Diff | Greater | Lesser | Greater_euqal | Lesser_equal) logical_expr
 | logical_expr;
 
-logical_expr: adding_expr (And | Or) adding_expr
+logical_expr: logical_expr (And | Or) adding_expr
 | adding_expr;
 
 adding_expr: adding_expr (Add | Sub) multiplying_expr
@@ -178,7 +178,12 @@ index_expr: index_expr
                 (LSB expr RSB)+|
                 Member_access_in_ope class_expr (LP expr_list? RP)?
             )
+| invoke_expr;
+
+invoke_expr: ID (LP expr_list? RP)
 | class_expr;
+
+
 
 //member_access_in: member_access_in Member_access_in_ope class_expr (LP expr_list? RP)?
 //| class_expr;
@@ -199,12 +204,6 @@ operands: INTLIT | FLOATLIT | BOOLEANLIT | STRINGLIT | arrayLIT | multi_ArrayLIT
 Self_word: SELF;
 
 
-// identifier - start
-ID: NORM_ID | SPEC_ID;
-idlist: ID (COMA ID)*;
-fragment NORM_ID: [a-zA-Z_][a-zA-Z0-9_]*;
-fragment SPEC_ID: '$'[a-zA-Z0-9_]+;
-// identifier _ end
 
 Add: ADD_OP;
 Sub: SUB_OP;
@@ -231,6 +230,14 @@ Colon: COLON;
 /////////////////// Lexer Rules//////////////////////
 //For Boolean literal
 BOOLEANLIT: BOOLTRUE | BOOLFALSE;
+
+// identifier - start
+ID: NORM_ID | SPEC_ID;
+idlist: ID (COMA ID)*;
+fragment NORM_ID: [a-zA-Z_][a-zA-Z0-9_]*;
+fragment SPEC_ID: '$'[a-zA-Z0-9_]+;
+// identifier _ end
+
 //For string litteral
 STRINGLIT:  '"' ('\'"')* ( ESC_SEQ | ~["] | ('\'"'))* ('\'"')* '"' //'"' ( ESC_SEQ | (~[\\"]) | ('\'"'))* '"'
 {
