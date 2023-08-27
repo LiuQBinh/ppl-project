@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ee8a68a7-4df8-41ed-a8a9-931803c30f7a" name="Changes" comment="ass2, init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/303.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/303.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/385.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/385.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/solutions/388.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/solutions/388.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/testcases/303.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/testcases/303.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/target/BKOOLVisitor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOL.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/assignment1/src/main/bkool/parser/BKOOLLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/main/bkool/astgen/ASTGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/main/bkool/astgen/ASTGeneration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment3/src/main/bkool/parser/BKOOL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/assignment3/src/main/bkool/parser/BKOOL.g4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,14 +375,6 @@
       <option name="project" value="LOCAL" />
       <updated>1689084619889</updated>
     </task>
-    <task id="LOCAL-00029" summary="ass2, init">
-      <option name="closed" value="true" />
-      <created>1689405822024</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1689405822024</updated>
-    </task>
     <task id="LOCAL-00030" summary="ass2, init">
       <option name="closed" value="true" />
       <created>1689613640777</created>
@@ -549,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693132780802</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="ass2, init">
+      <option name="closed" value="true" />
+      <created>1693136297138</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1693136297139</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,11 +580,6 @@
           <line>129</line>
           <option name="timeStamp" value="324" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/assignment2/src/test/ASTGenSuite.py</url>
-          <line>291</line>
-          <option name="timeStamp" value="348" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -611,6 +600,6 @@
     <SUITE FILE_PATH="coverage/ppl_project$BKOOLLexer.coverage" NAME="BKOOLLexer Coverage Results" MODIFIED="1688839923648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment1/src/main/bkool/parser" />
     <SUITE FILE_PATH="coverage/ppl_project$TestUtils.coverage" NAME="TestUtils Coverage Results" MODIFIED="1689405686554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/test" />
     <SUITE FILE_PATH="coverage/ppl_project$ASTGeneration.coverage" NAME="ASTGeneration Coverage Results" MODIFIED="1689405743776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src/main/bkool/astgen" />
-    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1693136037527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
+    <SUITE FILE_PATH="coverage/ppl_project$run.coverage" NAME="run Coverage Results" MODIFIED="1693136275697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment2/src" />
   </component>
 </project>
