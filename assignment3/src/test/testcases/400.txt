@@ -1,1 +1,3 @@
-int main() {foo();}
+
+            class Triangle extends Shape {}
+        
